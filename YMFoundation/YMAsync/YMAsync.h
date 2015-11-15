@@ -9,3 +9,4 @@
 #import <YMFoundation/YMAsyncBlockUtils.h>
 #import <YMFoundation/YMAsyncDispatchUtils.h>
 #import <YMFoundation/YMAsyncQueue.h>
+#import <YMFoundation/YMCallbackStore.h>
