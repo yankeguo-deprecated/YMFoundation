@@ -1,26 +1,26 @@
 //
-//  YMCallbackStore.m
+//  YMAsyncCallbackStore.m
 //  YMXian
 //
 //  Created by Yanke Guo on 15/6/4.
 //  Copyright (c) 2015年 Yanke Guo. All rights reserved.
 //
 
-#import "YMCallbackStore.h"
+#import "YMAsyncCallbackStore.h"
 
 #import "YMAsyncDispatchUtils.h"
 
-@interface YMCallbackStore<ObjectType> ()
+@interface YMAsyncCallbackStore<ObjectType> ()
 
 @property(nonatomic, assign) NSTimeInterval expires;
-@property(nonatomic, strong) void(^__nullable expireHandler)(ObjectType __nonnull callback);
+@property(nonatomic, strong) void(^expireHandler)(ObjectType callback);
 
 @property(nonatomic, strong) NSMutableDictionary *callbacks;
 @property(atomic, assign) NSInteger callbackId;
 
 @end
 
-@implementation YMCallbackStore
+@implementation YMAsyncCallbackStore
 
 + (id __nonnull)storeWithExpireHandler:(void (^ __nullable)(id __nonnull callback))expireHandler expires:(NSTimeInterval)expires {
   return [[self alloc] initWithExpireHandler:expireHandler expires:expires];

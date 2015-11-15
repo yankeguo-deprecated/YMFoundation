@@ -1,5 +1,5 @@
 //
-//  YMCallbackStoreSpec.m
+//  YMAsyncCallbackStoreSpec.m
 //  YMFoundationExample
 //
 //  Created by Yanke Guo on 15/11/16.
@@ -10,9 +10,9 @@
 
 typedef void(^YMTestCallback) (NSString* __nullable result);
 
-SpecBegin(YMCallbackStore)
+SpecBegin(YMAsyncCallbackStore)
 
-__block YMCallbackStore<YMTestCallback>* _callbackStore;
+__block YMAsyncCallbackStore<YMTestCallback>* _callbackStore;
 
 describe(@"basic usage", ^{
   
@@ -23,7 +23,7 @@ describe(@"basic usage", ^{
       value = [result copy];
     };
     
-    _callbackStore = [YMCallbackStore storeWithExpireHandler:nil expires:0];
+    _callbackStore = [YMAsyncCallbackStore storeWithExpireHandler:nil expires:0];
     [_callbackStore addCallback:testCallback];
     
     [_callbackStore invokeAllCallbacks:^(YMTestCallback  _Nonnull callback) {
@@ -46,7 +46,7 @@ describe(@"basic usage", ^{
       value = @"3";
     };
     
-    _callbackStore = [YMCallbackStore storeWithExpireHandler:nil expires:0];
+    _callbackStore = [YMAsyncCallbackStore storeWithExpireHandler:nil expires:0];
     [_callbackStore addCallback:testCallback];
     [_callbackStore addCallback:testCallback2];
     
@@ -70,7 +70,7 @@ describe(@"basic usage", ^{
       value = @"3";
     };
     
-    _callbackStore = [YMCallbackStore storeWithExpireHandler:nil expires:0];
+    _callbackStore = [YMAsyncCallbackStore storeWithExpireHandler:nil expires:0];
     [_callbackStore addCallback:testCallback];
     NSInteger callbackId2 = [_callbackStore addCallback:testCallback2];
     

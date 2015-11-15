@@ -1,5 +1,5 @@
 //
-//  YMCallbackStore.h
+//  YMAsyncCallbackStore.h
 //  YMXian
 //
 //  Created by Yanke Guo on 15/6/4.
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YMCallbackStore<ObjectType>: NSObject
+@interface YMAsyncCallbackStore<ObjectType>: NSObject
 
 /**
  *  初始化一个回调容器，并制定过期处理回调
