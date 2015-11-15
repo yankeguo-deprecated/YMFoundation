@@ -13,7 +13,7 @@
 @interface YMCallbackStore<ObjectType> ()
 
 @property(nonatomic, assign) NSTimeInterval expires;
-@property(nonatomic, strong) void(^ __nullable expireHandler)(ObjectType __nonnull callback);
+@property(nonatomic, strong) void(^__nullable expireHandler)(ObjectType __nonnull callback);
 
 @property(nonatomic, strong) NSMutableDictionary *callbacks;
 @property(atomic, assign) NSInteger callbackId;
@@ -43,7 +43,7 @@
   self.callbacks[@(currentCallbackId)] = [callback copy];
 
   if (self.expires != 0) {
-    dispatch_main_after(self.expires,^{
+    dispatch_main_after(self.expires, ^{
       id callback = [self.callbacks objectForKey:@(currentCallbackId)];
       if (callback) {
         [self.callbacks removeObjectForKey:@(currentCallbackId)];
@@ -55,7 +55,7 @@
   return currentCallbackId;
 }
 
-- (void)invokeAllCallbacks:(void(^ __nonnull)(id __nonnull callback))handler {
+- (void)invokeAllCallbacks:(void (^ __nonnull)(id __nonnull callback))handler {
   dispatch_async_main(^{
     [self.callbacks enumerateKeysAndObjectsUsingBlock:^(NSNumber *callbackId, id callback, BOOL *stop) {
       handler(callback);
