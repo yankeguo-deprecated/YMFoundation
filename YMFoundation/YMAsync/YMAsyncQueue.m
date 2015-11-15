@@ -10,6 +10,7 @@
 
 #import "YMAsyncBlockUtils.h"
 #import "YMAsyncDispatchUtils.h"
+#import "YMLogger.h"
 
 #define YMAsyncQueueIsEpsilon(VALUE) (VALUE <= DBL_MIN)
 
@@ -65,7 +66,7 @@
   [self.queue addObject:block];
   [self.blockNames addObject:name];
 
-  NSLog(@"[YMAsyncQueue] block queued: %@", name);
+  DLog(@"[YMAsyncQueue] block queued: %@", name);
 
   //  Run the queue
   [self runQueue];
@@ -129,7 +130,7 @@
     //  invoke block1 for timeout
     dispatch_main_after(timeout, ^{
       if (block1()) {
-        NSLog(@"[YMAsyncQueue] block expired: %@", blockName);
+        ELog(@"[YMAsyncQueue] block expired: %@", blockName);
       }
     });
 
@@ -137,7 +138,7 @@
     dispatch_async_main_alt(^{
       block(^{
         if (block1()) {
-          NSLog(@"[YMAsyncQueue] block releaseBlock called: %@", blockName);
+          DLog(@"[YMAsyncQueue] block releaseBlock called: %@", blockName);
         }
       });
     });
@@ -147,7 +148,7 @@
     //  Execute the block, passing the releaseBlock in
     dispatch_async_main_alt(^{
       block(^{
-        NSLog(@"[YMAsyncQueue] block releaseBlock called: %@", blockName);
+        DLog(@"[YMAsyncQueue] block releaseBlock called: %@", blockName);
         releaseBlock();
       });
     });

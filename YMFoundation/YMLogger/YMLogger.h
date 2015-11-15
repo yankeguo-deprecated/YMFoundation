@@ -7,6 +7,10 @@
 
 #import "UALogger.h"
 
+#pragma mark - Useful macros
+
+#define __LINE_INFO__ ([NSString stringWithFormat:@"%@(%@) %@", [@(__FILE__) lastPathComponent], @(__LINE__), @(__PRETTY_FUNCTION__)])
+
 #pragma mark - Log shortcuts
 
 #ifdef YM_VERBOSE_LOG
