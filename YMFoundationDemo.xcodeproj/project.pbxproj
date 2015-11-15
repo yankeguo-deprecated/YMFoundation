@@ -15,6 +15,9 @@
 		69C1DF9A1BF8EE18006F7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF991BF8EE18006F7304 /* Assets.xcassets */; };
 		69C1DF9D1BF8EE18006F7304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF9B1BF8EE18006F7304 /* LaunchScreen.storyboard */; };
 		69C1DFA81BF8EE18006F7304 /* YMFoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DFA71BF8EE18006F7304 /* YMFoundationDemoTests.m */; };
+		6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */; };
+		6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */; };
+		6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */; };
 		945D4694094DD80EB26D122F /* libPods-YMFoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,13 @@
 		69C1DFA31BF8EE18006F7304 /* YMFoundationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMFoundationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C1DFA71BF8EE18006F7304 /* YMFoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFoundationDemoTests.m; sourceTree = "<group>"; };
 		69C1DFA91BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
+		6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncDispatchUtils.m; sourceTree = "<group>"; };
+		6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueue.m; sourceTree = "<group>"; };
+		6D6DEB892671A0547B312AC9 /* YMAsyncBlockUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlockUtils.h; sourceTree = "<group>"; };
+		6D6DECCEDA28B55C5C3F7B7B /* YMAsyncDispatchUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncDispatchUtils.h; sourceTree = "<group>"; };
+		6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncBlockUtils.m; sourceTree = "<group>"; };
+		6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlock.h; sourceTree = "<group>"; };
 		D231A840360AC524EC474415 /* Pods-YMFoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationDemoTests/Pods-YMFoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				692EA8261BF8FF53002AB696 /* YMAsync.h */,
+				6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */,
+				6D6DEB892671A0547B312AC9 /* YMAsyncBlockUtils.h */,
+				6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */,
+				6D6DECCEDA28B55C5C3F7B7B /* YMAsyncDispatchUtils.h */,
+				6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */,
+				6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */,
+				6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */,
 			);
 			path = YMAsync;
 			sourceTree = "<group>";
@@ -375,6 +392,9 @@
 				69C1DF921BF8EE18006F7304 /* AppDelegate.m in Sources */,
 				69C1DF8F1BF8EE18006F7304 /* main.m in Sources */,
 				692EA8521BF904AD002AB696 /* UALogger.m in Sources */,
+				6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */,
+				6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */,
+				6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
