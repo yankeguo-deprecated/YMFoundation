@@ -3,4 +3,8 @@ platform :ios, '7.0'
 target 'YMFoundationExample' do
   pod "YMFoundation", path: '../'
 end
+target 'YMFoundationExampleTests' do
+  pod "Specta"
+  pod "Expecta"
+end
 

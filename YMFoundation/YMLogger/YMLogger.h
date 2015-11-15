@@ -21,6 +21,6 @@
 
 #pragma mark - YMLogger Configs
 
-extern inline void YMLoggerEnableDebug() {
+inline void YMLoggerEnableDebug() {
   [UALogger setMinimumSeverity:UALoggerSeverityDebug];
 }

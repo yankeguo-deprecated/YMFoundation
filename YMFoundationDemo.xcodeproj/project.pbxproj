@@ -14,25 +14,13 @@
 		69C1DF981BF8EE18006F7304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF961BF8EE18006F7304 /* Main.storyboard */; };
 		69C1DF9A1BF8EE18006F7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF991BF8EE18006F7304 /* Assets.xcassets */; };
 		69C1DF9D1BF8EE18006F7304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF9B1BF8EE18006F7304 /* LaunchScreen.storyboard */; };
-		69C1DFA81BF8EE18006F7304 /* YMFoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DFA71BF8EE18006F7304 /* YMFoundationDemoTests.m */; };
 		6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */; };
+		6D6DE7DEB11138B163CA0793 /* YMCallbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAD8CD50804B78A24E22 /* YMCallbackStore.m */; };
 		6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */; };
 		6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */; };
-		945D4694094DD80EB26D122F /* libPods-YMFoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		69C1DFA41BF8EE18006F7304 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69C1DF821BF8EE18006F7304 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 69C1DF891BF8EE18006F7304;
-			remoteInfo = YMFoundationDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		02A601832FEF1DFA5770CDB0 /* Pods-YMFoundationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationDemoTests/Pods-YMFoundationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		692EA81E1BF8FB8C002AB696 /* YMFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFoundation.h; sourceTree = "<group>"; };
 		692EA8261BF8FF53002AB696 /* YMAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAsync.h; sourceTree = "<group>"; };
 		692EA8271BF8FF64002AB696 /* YMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLogger.h; sourceTree = "<group>"; };
@@ -53,17 +41,15 @@
 		69C1DF991BF8EE18006F7304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C1DF9C1BF8EE18006F7304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69C1DFA31BF8EE18006F7304 /* YMFoundationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMFoundationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69C1DFA71BF8EE18006F7304 /* YMFoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFoundationDemoTests.m; sourceTree = "<group>"; };
-		69C1DFA91BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
+		6D6DE65A5187BEA5EFA7CF49 /* YMCallbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCallbackStore.h; sourceTree = "<group>"; };
 		6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncDispatchUtils.m; sourceTree = "<group>"; };
 		6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueue.m; sourceTree = "<group>"; };
+		6D6DEAD8CD50804B78A24E22 /* YMCallbackStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCallbackStore.m; sourceTree = "<group>"; };
 		6D6DEB892671A0547B312AC9 /* YMAsyncBlockUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlockUtils.h; sourceTree = "<group>"; };
 		6D6DECCEDA28B55C5C3F7B7B /* YMAsyncDispatchUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncDispatchUtils.h; sourceTree = "<group>"; };
 		6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncBlockUtils.m; sourceTree = "<group>"; };
 		6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlock.h; sourceTree = "<group>"; };
-		D231A840360AC524EC474415 /* Pods-YMFoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationDemoTests/Pods-YMFoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,14 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		69C1DFA01BF8EE18006F7304 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				945D4694094DD80EB26D122F /* libPods-YMFoundationDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +90,8 @@
 				6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */,
 				6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */,
 				6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */,
+				6D6DE65A5187BEA5EFA7CF49 /* YMCallbackStore.h */,
+				6D6DEAD8CD50804B78A24E22 /* YMCallbackStore.m */,
 			);
 			path = YMAsync;
 			sourceTree = "<group>";
@@ -171,9 +151,7 @@
 			children = (
 				692EA81D1BF8EE5A002AB696 /* YMFoundation */,
 				69C1DF8C1BF8EE18006F7304 /* YMFoundationDemo */,
-				69C1DFA61BF8EE18006F7304 /* YMFoundationDemoTests */,
 				69C1DF8B1BF8EE18006F7304 /* Products */,
-				D631478451D556C19CC5611E /* Pods */,
 				95E9D08F6EC7348AA4AAAE20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -182,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				69C1DF8A1BF8EE18006F7304 /* YMFoundationDemo.app */,
-				69C1DFA31BF8EE18006F7304 /* YMFoundationDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,30 +188,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		69C1DFA61BF8EE18006F7304 /* YMFoundationDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				69C1DFA71BF8EE18006F7304 /* YMFoundationDemoTests.m */,
-				69C1DFA91BF8EE18006F7304 /* Info.plist */,
-			);
-			path = YMFoundationDemoTests;
-			sourceTree = "<group>";
-		};
 		95E9D08F6EC7348AA4AAAE20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D631478451D556C19CC5611E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D231A840360AC524EC474415 /* Pods-YMFoundationDemoTests.debug.xcconfig */,
-				02A601832FEF1DFA5770CDB0 /* Pods-YMFoundationDemoTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,27 +216,6 @@
 			productReference = 69C1DF8A1BF8EE18006F7304 /* YMFoundationDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		69C1DFA21BF8EE18006F7304 /* YMFoundationDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69C1DFAF1BF8EE18006F7304 /* Build configuration list for PBXNativeTarget "YMFoundationDemoTests" */;
-			buildPhases = (
-				9F9141609E4EF05F48700707 /* Check Pods Manifest.lock */,
-				69C1DF9F1BF8EE18006F7304 /* Sources */,
-				69C1DFA01BF8EE18006F7304 /* Frameworks */,
-				69C1DFA11BF8EE18006F7304 /* Resources */,
-				91C9C494141BAE4A6573B57D /* Embed Pods Frameworks */,
-				1EF2CC66EF02F02AF6CE7147 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				69C1DFA51BF8EE18006F7304 /* PBXTargetDependency */,
-			);
-			name = YMFoundationDemoTests;
-			productName = YMFoundationDemoTests;
-			productReference = 69C1DFA31BF8EE18006F7304 /* YMFoundationDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -289,10 +227,6 @@
 				TargetAttributes = {
 					69C1DF891BF8EE18006F7304 = {
 						CreatedOnToolsVersion = 7.1.1;
-					};
-					69C1DFA21BF8EE18006F7304 = {
-						CreatedOnToolsVersion = 7.1.1;
-						TestTargetID = 69C1DF891BF8EE18006F7304;
 					};
 				};
 			};
@@ -310,7 +244,6 @@
 			projectRoot = "";
 			targets = (
 				69C1DF891BF8EE18006F7304 /* YMFoundationDemo */,
-				69C1DFA21BF8EE18006F7304 /* YMFoundationDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,62 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69C1DFA11BF8EE18006F7304 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1EF2CC66EF02F02AF6CE7147 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YMFoundationDemoTests/Pods-YMFoundationDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91C9C494141BAE4A6573B57D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YMFoundationDemoTests/Pods-YMFoundationDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F9141609E4EF05F48700707 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69C1DF861BF8EE18006F7304 /* Sources */ = {
@@ -395,26 +273,11 @@
 				6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */,
 				6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */,
 				6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		69C1DF9F1BF8EE18006F7304 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69C1DFA81BF8EE18006F7304 /* YMFoundationDemoTests.m in Sources */,
+				6D6DE7DEB11138B163CA0793 /* YMCallbackStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		69C1DFA51BF8EE18006F7304 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 69C1DF891BF8EE18006F7304 /* YMFoundationDemo */;
-			targetProxy = 69C1DFA41BF8EE18006F7304 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		69C1DF961BF8EE18006F7304 /* Main.storyboard */ = {
@@ -538,32 +401,6 @@
 			};
 			name = Release;
 		};
-		69C1DFB01BF8EE18006F7304 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D231A840360AC524EC474415 /* Pods-YMFoundationDemoTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YMFoundationDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMFoundationDemo.app/YMFoundationDemo";
-			};
-			name = Debug;
-		};
-		69C1DFB11BF8EE18006F7304 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02A601832FEF1DFA5770CDB0 /* Pods-YMFoundationDemoTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YMFoundationDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMFoundationDemo.app/YMFoundationDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,15 +418,6 @@
 			buildConfigurations = (
 				69C1DFAD1BF8EE18006F7304 /* Debug */,
 				69C1DFAE1BF8EE18006F7304 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		69C1DFAF1BF8EE18006F7304 /* Build configuration list for PBXNativeTarget "YMFoundationDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				69C1DFB01BF8EE18006F7304 /* Debug */,
-				69C1DFB11BF8EE18006F7304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

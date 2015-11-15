@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 
-#import <YMFoundation/YMFoundation.h>
-
 @interface ViewController ()
 
 @end
