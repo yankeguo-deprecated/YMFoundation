@@ -6,6 +6,8 @@
 //
 
 #import <YMFoundation/YMLogger.h>
+#import <YMFoundation/YMUtils.h>
+
 #import <YMFoundation/YMAsync.h>
 #import <YMFoundation/YMJSON.h>
 #import <YMFoundation/YMLoader.h>

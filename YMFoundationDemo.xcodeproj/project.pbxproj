@@ -14,6 +14,7 @@
 		69C1DF981BF8EE18006F7304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF961BF8EE18006F7304 /* Main.storyboard */; };
 		69C1DF9A1BF8EE18006F7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF991BF8EE18006F7304 /* Assets.xcassets */; };
 		69C1DF9D1BF8EE18006F7304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF9B1BF8EE18006F7304 /* LaunchScreen.storyboard */; };
+		6D6DE064F27F1CFBC63505A0 /* M13OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */; };
 		6D6DE0F7CCDEDE0251559BF3 /* CMDQueryStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE64F79E1437F0975E49D /* CMDQueryStringValueTransformer.m */; };
 		6D6DE1A3006A1C4330DEBDD2 /* YMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE21444ED16FDE82845FF /* YMLogger.m */; };
 		6D6DE1CCC68F5ABBF830ACBD /* CMDQueryStringReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEF2F1F54CE342F96F9C2 /* CMDQueryStringReader.m */; };
@@ -50,12 +51,14 @@
 		69C1DF991BF8EE18006F7304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C1DF9C1BF8EE18006F7304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6DE155D689D6E9E4FB9F3C /* M13OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13OrderedDictionary.h; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
 		6D6DE21444ED16FDE82845FF /* YMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMLogger.m; sourceTree = "<group>"; };
 		6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncThresholder.m; sourceTree = "<group>"; };
 		6D6DE4A85D2211C96FBFA607 /* CMDQueryStringReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDQueryStringReader.h; sourceTree = "<group>"; };
 		6D6DE4D7AB7F5233D0E04C4B /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
 		6D6DE5056D80C62359F93D45 /* CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringSerialization.m; sourceTree = "<group>"; };
+		6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13OrderedDictionary.m; sourceTree = "<group>"; };
 		6D6DE578B5A69322313123E3 /* NSString+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		6D6DE5E2169917BA10B83696 /* NSString+CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CMDQueryStringSerialization.m"; sourceTree = "<group>"; };
 		6D6DE62AACC3108E09716F42 /* CMDQueryStringWritingOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDQueryStringWritingOptions.h; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		6D6DEED8C50F59D8281F7D42 /* YMAsyncThresholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncThresholder.h; sourceTree = "<group>"; };
 		6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlock.h; sourceTree = "<group>"; };
 		6D6DEF2F1F54CE342F96F9C2 /* CMDQueryStringReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringReader.m; sourceTree = "<group>"; };
+		6D6DEF7935140F114393301B /* YMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUtils.h; sourceTree = "<group>"; };
 		EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,7 @@
 				692EA8231BF8FD43002AB696 /* YMLogger */,
 				692EA8241BF8FD43002AB696 /* YMRequest */,
 				692EA8251BF8FD43002AB696 /* YMRouter */,
+				6D6DE3A03E260B60F95F0C40 /* YMUtils */,
 			);
 			path = YMFoundation;
 			sourceTree = "<group>";
@@ -217,6 +222,16 @@
 				69C1DF8E1BF8EE18006F7304 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D6DE3A03E260B60F95F0C40 /* YMUtils */ = {
+			isa = PBXGroup;
+			children = (
+				6D6DE155D689D6E9E4FB9F3C /* M13OrderedDictionary.h */,
+				6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */,
+				6D6DEF7935140F114393301B /* YMUtils.h */,
+			);
+			path = YMUtils;
 			sourceTree = "<group>";
 		};
 		6D6DE7791775247C513806A5 /* Utils */ = {
@@ -336,6 +351,7 @@
 				6D6DE0F7CCDEDE0251559BF3 /* CMDQueryStringValueTransformer.m in Sources */,
 				6D6DE497D669E5E7513AC9B0 /* NSURL+CMDQueryStringSerialization.m in Sources */,
 				6D6DE77FF7E4D4FFC2330CF0 /* NSString+CMDQueryStringSerialization.m in Sources */,
+				6D6DE064F27F1CFBC63505A0 /* M13OrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
