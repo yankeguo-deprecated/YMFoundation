@@ -42,7 +42,7 @@
 
 我们会快速跟进最新的正式版 Xcode 和 iOS SDK，并在满足兼容性的前提下，将新特性融入到代码中。比如说 Xcode 6.4 - 7 引入的泛型和空值标注`__nonnull`。
 
-代码风格尽可能地跟进 Google Objective-C 代码风格。
+代码风格尽可能地跟进 Google Objective-C 代码风格(AppCode 内置)。
 
 # 开源协议
 

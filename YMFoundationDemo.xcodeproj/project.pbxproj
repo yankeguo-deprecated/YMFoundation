@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692EA8521BF904AD002AB696 /* UALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA8511BF904AD002AB696 /* UALogger.m */; };
 		69C1DF8F1BF8EE18006F7304 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF8E1BF8EE18006F7304 /* main.m */; };
 		69C1DF921BF8EE18006F7304 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF911BF8EE18006F7304 /* AppDelegate.m */; };
 		69C1DF951BF8EE18006F7304 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF941BF8EE18006F7304 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 		692EA84D1BF90125002AB696 /* YMLocale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLocale.h; sourceTree = "<group>"; };
 		692EA84E1BF90139002AB696 /* YMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRequest.h; sourceTree = "<group>"; };
 		692EA84F1BF9014D002AB696 /* YMRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRouter.h; sourceTree = "<group>"; };
+		692EA8501BF904AD002AB696 /* UALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UALogger.h; sourceTree = "<group>"; };
+		692EA8511BF904AD002AB696 /* UALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UALogger.m; sourceTree = "<group>"; };
 		69C1DF8A1BF8EE18006F7304 /* YMFoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMFoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C1DF8E1BF8EE18006F7304 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69C1DF901BF8EE18006F7304 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 		692EA8231BF8FD43002AB696 /* YMLogger */ = {
 			isa = PBXGroup;
 			children = (
+				692EA8501BF904AD002AB696 /* UALogger.h */,
+				692EA8511BF904AD002AB696 /* UALogger.m */,
 				692EA8271BF8FF64002AB696 /* YMLogger.h */,
 			);
 			path = YMLogger;
@@ -369,6 +374,7 @@
 				69C1DF951BF8EE18006F7304 /* ViewController.m in Sources */,
 				69C1DF921BF8EE18006F7304 /* AppDelegate.m in Sources */,
 				69C1DF8F1BF8EE18006F7304 /* main.m in Sources */,
+				692EA8521BF904AD002AB696 /* UALogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
