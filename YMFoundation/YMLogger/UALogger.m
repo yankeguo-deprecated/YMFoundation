@@ -30,7 +30,7 @@ static UALoggerSeverity UA__minimumSeverity = UALoggerSeverityUnset;
   [self observeUserDefaultsKey];
   
   [self setShouldLogInProduction:YES];
-  [self setMinimumSeverity:UALoggerSeverityDebug];
+  [self setMinimumSeverity:UALoggerSeverityWarn];
 }
 
 + (void)setupDefaultFormats {
