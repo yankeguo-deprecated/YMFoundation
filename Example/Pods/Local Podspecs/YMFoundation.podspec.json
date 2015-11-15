@@ -1,0 +1,80 @@
+{
+  "name": "YMFoundation",
+  "version": "0.1.0",
+  "summary": "The basic layer of YMXian",
+  "description": "",
+  "homepage": "https://github.com/YMXian/YMFoundation",
+  "license": "MIT",
+  "authors": {
+    "Yanke Guo": "guoyk@1mxian.com"
+  },
+  "source": {
+    "git": "https://github.com/YMXian/YMFoundation.git",
+    "tag": "v0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "YMFoundation/**.{h,m}",
+  "subspecs": [
+    {
+      "name": "YMLogger",
+      "source_files": "YMFoundation/YMLogger/**/*.{h,m}"
+    },
+    {
+      "name": "YMAsync",
+      "source_files": "YMFoundation/YMAsync/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    },
+    {
+      "name": "YMJSON",
+      "source_files": "YMFoundation/YMJSON/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    },
+    {
+      "name": "YMLoader",
+      "source_files": "YMFoundation/YMLoader/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    },
+    {
+      "name": "YMLocale",
+      "source_files": "YMFoundation/YMLocale/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    },
+    {
+      "name": "YMRequest",
+      "source_files": "YMFoundation/YMRequest/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    },
+    {
+      "name": "YMRouter",
+      "source_files": "YMFoundation/YMRouter/**/*.{h,m}",
+      "dependencies": {
+        "YMFoundation/YMLogger": [
+
+        ]
+      }
+    }
+  ]
+}
