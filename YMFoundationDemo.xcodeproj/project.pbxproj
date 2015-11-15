@@ -16,6 +16,7 @@
 		69C1DF9D1BF8EE18006F7304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF9B1BF8EE18006F7304 /* LaunchScreen.storyboard */; };
 		6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */; };
 		6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */; };
+		6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */; };
 		6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */; };
 		6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		69C1DF9C1BF8EE18006F7304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
+		6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncThresholder.m; sourceTree = "<group>"; };
 		6D6DE65A5187BEA5EFA7CF49 /* YMAsyncCallbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncCallbackStore.h; sourceTree = "<group>"; };
 		6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncDispatchUtils.m; sourceTree = "<group>"; };
 		6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueue.m; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		6D6DEB892671A0547B312AC9 /* YMAsyncBlockUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlockUtils.h; sourceTree = "<group>"; };
 		6D6DECCEDA28B55C5C3F7B7B /* YMAsyncDispatchUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncDispatchUtils.h; sourceTree = "<group>"; };
 		6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncBlockUtils.m; sourceTree = "<group>"; };
+		6D6DEED8C50F59D8281F7D42 /* YMAsyncThresholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncThresholder.h; sourceTree = "<group>"; };
 		6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlock.h; sourceTree = "<group>"; };
 		EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +95,8 @@
 				6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */,
 				6D6DE65A5187BEA5EFA7CF49 /* YMAsyncCallbackStore.h */,
 				6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */,
+				6D6DEED8C50F59D8281F7D42 /* YMAsyncThresholder.h */,
+				6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */,
 			);
 			path = YMAsync;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */,
 				6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */,
 				6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */,
+				6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
