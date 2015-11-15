@@ -14,6 +14,7 @@
 		69C1DF981BF8EE18006F7304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF961BF8EE18006F7304 /* Main.storyboard */; };
 		69C1DF9A1BF8EE18006F7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF991BF8EE18006F7304 /* Assets.xcassets */; };
 		69C1DF9D1BF8EE18006F7304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C1DF9B1BF8EE18006F7304 /* LaunchScreen.storyboard */; };
+		6D6DE1A3006A1C4330DEBDD2 /* YMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE21444ED16FDE82845FF /* YMLogger.m */; };
 		6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */; };
 		6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */; };
 		6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */; };
@@ -43,6 +44,7 @@
 		69C1DF9C1BF8EE18006F7304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
+		6D6DE21444ED16FDE82845FF /* YMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMLogger.m; sourceTree = "<group>"; };
 		6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncThresholder.m; sourceTree = "<group>"; };
 		6D6DE65A5187BEA5EFA7CF49 /* YMAsyncCallbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncCallbackStore.h; sourceTree = "<group>"; };
 		6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncDispatchUtils.m; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				692EA8501BF904AD002AB696 /* UALogger.h */,
 				692EA8511BF904AD002AB696 /* UALogger.m */,
 				692EA8271BF8FF64002AB696 /* YMLogger.h */,
+				6D6DE21444ED16FDE82845FF /* YMLogger.m */,
 			);
 			path = YMLogger;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */,
 				6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */,
 				6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */,
+				6D6DE1A3006A1C4330DEBDD2 /* YMLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
