@@ -81,6 +81,7 @@
 		6D6DEF2EEB094C12B63469FF /* YMAsyncBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncBlock.h; sourceTree = "<group>"; };
 		6D6DEF2F1F54CE342F96F9C2 /* CMDQueryStringReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringReader.m; sourceTree = "<group>"; };
 		6D6DEF7935140F114393301B /* YMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUtils.h; sourceTree = "<group>"; };
+		6D6DEF7C6390F2E4C6A00B70 /* YMUtilsSuppressMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUtilsSuppressMacros.h; sourceTree = "<group>"; };
 		EED8B09E0411D17DFA6398BE /* libPods-YMFoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -230,6 +231,7 @@
 				6D6DE155D689D6E9E4FB9F3C /* M13OrderedDictionary.h */,
 				6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */,
 				6D6DEF7935140F114393301B /* YMUtils.h */,
+				6D6DEF7C6390F2E4C6A00B70 /* YMUtilsSuppressMacros.h */,
 			);
 			path = YMUtils;
 			sourceTree = "<group>";
