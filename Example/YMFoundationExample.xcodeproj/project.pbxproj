@@ -18,6 +18,7 @@
 		6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */; };
 		6976648F1BF91F44000F3210 /* YMAsyncThresholderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */; };
 		69EEBFDA1BF93D890076AF14 /* YMJSONSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EEBFD91BF93D890076AF14 /* YMJSONSpec.m */; };
+		69EEBFDC1BF9431C0076AF14 /* YMRouterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EEBFDB1BF9431C0076AF14 /* YMRouterSpec.m */; };
 		C7BB910B58DF45491E8C06B9 /* libPods-YMFoundationExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3796FF00253809AED10919EE /* libPods-YMFoundationExampleTests.a */; };
 		FAB5DA0885A4B2EBB8728CC0 /* libPods-YMFoundationExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F2253F50A0DAAF5DC516ED /* libPods-YMFoundationExample.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncCallbackStoreSpec.m; sourceTree = "<group>"; };
 		6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncThresholderSpec.m; sourceTree = "<group>"; };
 		69EEBFD91BF93D890076AF14 /* YMJSONSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMJSONSpec.m; sourceTree = "<group>"; };
+		69EEBFDB1BF9431C0076AF14 /* YMRouterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMRouterSpec.m; sourceTree = "<group>"; };
 		6A2A9E9706AE26B0C5928AF8 /* Pods-YMFoundationExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationExampleTests/Pods-YMFoundationExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B178F68A1C20B818DBA79027 /* Pods-YMFoundationExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationExampleTests/Pods-YMFoundationExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		B3402E96388D20CF138C8A8F /* Pods-YMFoundationExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationExample/Pods-YMFoundationExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		6966C2B51BF9144D003B59A1 /* YMFoundationExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				69EEBFDB1BF9431C0076AF14 /* YMRouterSpec.m */,
 				69EEBFD91BF93D890076AF14 /* YMJSONSpec.m */,
 				6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */,
 				6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */,
@@ -371,6 +374,7 @@
 				6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */,
 				6966C2B71BF9144D003B59A1 /* YMFoundationTestsHelper.h in Sources */,
 				6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */,
+				69EEBFDC1BF9431C0076AF14 /* YMRouterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
