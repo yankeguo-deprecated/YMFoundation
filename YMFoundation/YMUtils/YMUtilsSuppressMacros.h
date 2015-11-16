@@ -9,6 +9,8 @@
 
 #define SUPPRESS_ARC_PERFORM_SELECTOR_LEAKS _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")
 
+#define SUPPRESS_GNU                        _Pragma("clang diagnostic ignored \"-Wgnu\"")
+
 #define SUPPRESS_DEPRECATED_DECLARATIONS    _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"")
 
 #define SUPPRESS_RECEIVER_IS_WEAK           _Pragma("clang diagnostic ignored \"-Wreceiver-is-weak\"")

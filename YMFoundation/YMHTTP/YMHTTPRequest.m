@@ -13,6 +13,7 @@
 
 #import "YMLogger.h"
 #import "NSError+YMHTTP.h"
+#import "YMUtilsSuppressMacros.h"
 #import "CMDQueryStringSerialization.h"
 
 static YMHTTPRequest *YMHTTPRequestDefault = nil;
@@ -337,8 +338,8 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
 
   //  User-Agent
   NSString *userAgent = nil;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wgnu"
+  SUPPRESS_START
+  SUPPRESS_GNU
 #if TARGET_OS_IOS
   // User-Agent Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43
   userAgent =
@@ -347,7 +348,7 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
   // User-Agent Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43
   userAgent = [NSString stringWithFormat:@"%@/%@ (%@; watchOS %@; Scale/%0.2f)", [[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleExecutableKey] ?: [[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleIdentifierKey], [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] ?: [[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleVersionKey], [[WKInterfaceDevice currentDevice] model], [[WKInterfaceDevice currentDevice] systemVersion], [[WKInterfaceDevice currentDevice] screenScale]];
 #endif
-#pragma clang diagnostic pop
+  SUPPRESS_END
   if (userAgent) {
     if (![userAgent canBeConvertedToEncoding:NSASCIIStringEncoding]) {
       NSMutableString *mutableUserAgent = [userAgent mutableCopy];
