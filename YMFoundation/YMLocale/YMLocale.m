@@ -51,7 +51,7 @@ NSString* T(NSString* __nonnull key) {
   //  Load cache
   NSDictionary *cachedStore = [NSDictionary dictionaryWithContentsOfFile:_cachePath];
 
-  if (cachedStore == nil || cacheEnabled) {
+  if (cachedStore == nil || !cacheEnabled) {
     NSMutableDictionary *allStore = [[NSMutableDictionary alloc] init];
 
     //  Get all files
