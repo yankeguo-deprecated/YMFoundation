@@ -23,6 +23,16 @@ Pod::Spec.new do |s|
   # YMUtils
   s.subspec "YMUtils" do |sp|
     sp.source_files = "YMFoundation/YMUtils/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+  end
+
+  # YMLocale
+  s.subspec "YMLocale" do |sp|
+    sp.source_files = "YMFoundation/YMLocale/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
   end
 
   # All others
@@ -30,7 +40,6 @@ Pod::Spec.new do |s|
     "YMAsync",
     "YMJSON",
     "YMLoader",
-    "YMLocale",
     "YMRequest",
     "YMRouter"
   ].each do |sp_name|
@@ -39,6 +48,7 @@ Pod::Spec.new do |s|
 
       sp.dependency     "YMFoundation/YMLogger"
       sp.dependency     "YMFoundation/YMUtils"
+      sp.dependency     "YMFoundation/YMLocale"
     end
   end
 end

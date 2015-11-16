@@ -6,6 +6,7 @@
 //
 
 #import <YMFoundation/YMUtilsSuppressMacros.h>
+#import <YMFoundation/YMUtilsSystemInfoMacros.h>
 
 #import <YMFoundation/M13OrderedDictionary.h>
 
@@ -13,3 +14,4 @@
 #define YMMutableOrderedDictionary M13MutableOrderedDictionary
 
 #import <YMFoundation/NSError+YMFoundation.h>
+#import <YMFoundation/NSDictionary+YMFoundation.h>

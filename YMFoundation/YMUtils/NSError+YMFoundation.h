@@ -41,4 +41,11 @@ extern const NSString *__nonnull YMFoundationErrorLevelKey;
  */
 - (instancetype __nonnull)errorWithErrorLevel:(YMErrorLevel)errorLevel;
 
+/**
+ * Readable description
+ *
+ * Try localizedDescription, localizedFailureReason, or L(error.unknown_error)
+ */
+- (NSString* __nonnull)readableDescription;
+
 @end

@@ -38,14 +38,14 @@ typedef void(^YMAsyncQueueBlock)(YMAsyncQueueReleaseBlock __nonnull releaseBlock
 /**
  *  Create a instance
  *
- *  @return a instance
+ *  @return a sharedLocale
  */
 + (instancetype __nonnull)queue;
 
 /**
  *  Create a instance
  *
- *  @return a instance
+ *  @return a sharedLocale
  */
 - (instancetype __nonnull)init;
 

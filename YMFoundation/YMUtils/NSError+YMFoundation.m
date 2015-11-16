@@ -5,6 +5,8 @@
 
 #import "NSError+YMFoundation.h"
 
+#import "YMLocale.h"
+
 const NSString *YMFoundationErrorLevelKey = @"YMFoundationErrorLevelKey";
 
 @implementation NSError (YMFoundation)
@@ -23,7 +25,19 @@ const NSString *YMFoundationErrorLevelKey = @"YMFoundationErrorLevelKey";
 - (instancetype)errorWithErrorLevel:(YMErrorLevel)errorLevel {
   NSMutableDictionary *newUserInfo = [[NSMutableDictionary alloc] initWithDictionary:self.userInfo];
   newUserInfo[YMFoundationErrorLevelKey] = @(errorLevel);
-  return [[[self class] alloc] initWithDomain:self.domain code:self.code userInfo:newUserInfo];
+  return [(NSError *) [[self class] alloc] initWithDomain:self.domain code:self.code userInfo:newUserInfo];
+}
+
+- (NSString *__nonnull)readableDescription {
+  NSString* ldesc = self.localizedDescription;
+  if (ldesc.length) {
+    return ldesc;
+  }
+  NSString* lfr   = self.localizedFailureReason;
+  if (lfr.length) {
+    return lfr;
+  }
+  return L(error.unknown_error);
 }
 
 @end

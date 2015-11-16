@@ -11,12 +11,15 @@ PODS:
     - YMFoundation/YMRouter (= 0.1.0)
     - YMFoundation/YMUtils (= 0.1.0)
   - YMFoundation/YMAsync (0.1.0):
+    - YMFoundation/YMLocale
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMJSON (0.1.0):
+    - YMFoundation/YMLocale
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMLoader (0.1.0):
+    - YMFoundation/YMLocale
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMLocale (0.1.0):
@@ -24,12 +27,15 @@ PODS:
     - YMFoundation/YMUtils
   - YMFoundation/YMLogger (0.1.0)
   - YMFoundation/YMRequest (0.1.0):
+    - YMFoundation/YMLocale
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMRouter (0.1.0):
+    - YMFoundation/YMLocale
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
-  - YMFoundation/YMUtils (0.1.0)
+  - YMFoundation/YMUtils (0.1.0):
+    - YMFoundation/YMLogger
 
 DEPENDENCIES:
   - Expecta
@@ -43,6 +49,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  YMFoundation: 110a9dfc43a81a95bffb1776dac6fd58932ec385
+  YMFoundation: d2cc0e08e97ff1f187497278644f406c0fe1e940
 
 COCOAPODS: 0.39.0
