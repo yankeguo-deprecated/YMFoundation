@@ -18,7 +18,9 @@ PODS:
   - YMFoundation/YMJSON (0.1.0):
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
-  - YMFoundation/YMLoader (0.1.0)
+  - YMFoundation/YMLoader (0.1.0):
+    - YMFoundation/YMLogger
+    - YMFoundation/YMUtils
   - YMFoundation/YMLocale (0.1.0):
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
@@ -43,6 +45,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  YMFoundation: 59764adb1ef8c37b7a3e13d32d98aff73b07b9ac
+  YMFoundation: b60b1a83cd982308c5087cc476d26384e01eb27c
 
 COCOAPODS: 0.39.0

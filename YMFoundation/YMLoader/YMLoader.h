@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSObject+YMLoader.h"
 #import "YMLoaderProxy.h"
 
 typedef id __nonnull (^YMLoaderObjectFactory)();

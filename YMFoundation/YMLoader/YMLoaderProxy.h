@@ -7,7 +7,7 @@
 
 @class YMLoader;
 
-@interface YMLoaderProxy: NSObject
+@interface YMLoaderProxy: NSProxy
 
 @property(nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *__nonnull registry;
 

@@ -30,6 +30,9 @@ Pod::Spec.new do |s|
   # YMLoader
   s.subspec "YMLoader" do |sp|
     sp.source_files = "YMFoundation/YMLoader/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
   end
 
   # Middle-level Modules
