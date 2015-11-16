@@ -75,11 +75,13 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMUtils"
   end
 
-  # YMRouter
+  # YMHTTP
   s.subspec "YMHTTP" do |sp|
     sp.source_files = "YMFoundation/YMHTTP/**/*.{h,m}"
 
     sp.dependency     "YMFoundation/YMLogger"
     sp.dependency     "YMFoundation/YMUtils"
+    sp.dependency     "YMFoundation/YMError"
+    sp.dependency     "YMFoundation/YMJSON"
   end
 end

@@ -13,7 +13,6 @@
 		692EA83F1BF8FF9E002AB696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692EA83D1BF8FF9E002AB696 /* Main.storyboard */; };
 		692EA8411BF8FF9E002AB696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692EA8401BF8FF9E002AB696 /* Assets.xcassets */; };
 		692EA8441BF8FF9E002AB696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692EA8421BF8FF9E002AB696 /* LaunchScreen.storyboard */; };
-		6966C2B71BF9144D003B59A1 /* YMFoundationTestsHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 6966C2B61BF9144D003B59A1 /* YMFoundationTestsHelper.h */; };
 		6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */; };
 		6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */; };
 		6976648F1BF91F44000F3210 /* YMAsyncThresholderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */; };
@@ -375,7 +374,6 @@
 				6976648F1BF91F44000F3210 /* YMAsyncThresholderSpec.m in Sources */,
 				69EEBFDA1BF93D890076AF14 /* YMJSONSpec.m in Sources */,
 				6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */,
-				6966C2B71BF9144D003B59A1 /* YMFoundationTestsHelper.h in Sources */,
 				6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */,
 				69EEBFDE1BF9C1580076AF14 /* YMLoaderSpec.m in Sources */,
 				69EEBFDC1BF9431C0076AF14 /* YMRouterSpec.m in Sources */,
