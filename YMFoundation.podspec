@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   s.source_files = "YMFoundation/**.{h,m}"
 
+  # Basic Modules
+
   # YMLogger
   s.subspec "YMLogger" do |sp|
     sp.source_files = "YMFoundation/YMLogger/**/*.{h,m}"
@@ -23,9 +25,14 @@ Pod::Spec.new do |s|
   # YMUtils
   s.subspec "YMUtils" do |sp|
     sp.source_files = "YMFoundation/YMUtils/**/*.{h,m}"
-
-    sp.dependency     "YMFoundation/YMLogger"
   end
+
+  # YMLoader
+  s.subspec "YMLoader" do |sp|
+    sp.source_files = "YMFoundation/YMLoader/**/*.{h,m}"
+  end
+
+  # Middle-level Modules
 
   # YMLocale
   s.subspec "YMLocale" do |sp|
@@ -35,21 +42,41 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMUtils"
   end
 
-  # All others
-  [
-    "YMAsync",
-    "YMError",
-    "YMJSON",
-    "YMLoader",
-    "YMRequest",
-    "YMRouter"
-  ].each do |sp_name|
-    s.subspec sp_name do |sp|
-      sp.source_files = "YMFoundation/#{sp_name}/**/*.{h,m}"
+  # YMError
+  s.subspec "YMError" do |sp|
+    sp.source_files = "YMFoundation/YMError/**/*.{h,m}"
 
-      sp.dependency     "YMFoundation/YMLogger"
-      sp.dependency     "YMFoundation/YMUtils"
-      sp.dependency     "YMFoundation/YMLocale"
-    end
+    sp.dependency     "YMFoundation/YMLocale"
+  end
+
+  # YMAsync
+  s.subspec "YMAsync" do |sp|
+    sp.source_files = "YMFoundation/YMAsync/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+  end
+
+  # YMJSON
+  s.subspec "YMJSON" do |sp|
+    sp.source_files = "YMFoundation/YMJSON/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
+  end
+
+  # YMRouter
+  s.subspec "YMRouter" do |sp|
+    sp.source_files = "YMFoundation/YMRouter/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
+  end
+
+  # YMRouter
+  s.subspec "YMRequest" do |sp|
+    sp.source_files = "YMFoundation/YMRequest/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
   end
 end

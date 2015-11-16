@@ -163,7 +163,7 @@
   char *rawPropertyType = property_copyAttributeValue(prop, "T");
   NSString *className = [YMJSONDescriptor classNameFromPropertyTypeDescription:rawPropertyType];
   mapping.propertyClass = NSClassFromString(className);
-#ifdef ENABLE_DEBUG_SYSTEM
+#ifdef DEBUG
   NSParameterAssert(mapping.propertyClass != NULL);
   //  Check transform
   if (mapping.genericClass == NULL) {
