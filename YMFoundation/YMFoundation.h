@@ -9,6 +9,7 @@
 #import <YMFoundation/YMUtils.h>
 
 #import <YMFoundation/YMAsync.h>
+#import <YMFoundation/YMError.h>
 #import <YMFoundation/YMJSON.h>
 #import <YMFoundation/YMLoader.h>
 #import <YMFoundation/YMLocale.h>

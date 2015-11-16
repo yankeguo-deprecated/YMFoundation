@@ -28,12 +28,12 @@
 		6D6DE67E35F16968C98112A7 /* YMLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAC2B421FE49B8722CA8 /* YMLocale.m */; };
 		6D6DE6F4F7AAF7AED73EE104 /* YMJSONMappingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEBDD181801FB1E8AE1E2 /* YMJSONMappingItem.m */; };
 		6D6DE77FF7E4D4FFC2330CF0 /* NSString+CMDQueryStringSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE5E2169917BA10B83696 /* NSString+CMDQueryStringSerialization.m */; };
-		6D6DE7CEB0A7BB4829DDF7CE /* NSError+YMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */; };
 		6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */; };
 		6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */; };
 		6D6DE8E469FD9BDE6821460F /* ISO8601Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE91510B416C80EACB4E7 /* ISO8601Serialization.m */; };
 		6D6DE95A6BC066F98C4DA2B2 /* YMJSONDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEBA5CE903A4704D7AF94 /* YMJSONDescriptor.m */; };
 		6D6DEABC6182D37A63222FD8 /* YMAsyncQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */; };
+		6D6DED697FA99BDFA7269C58 /* NSError+YMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE068FD7119DBA15F70F3 /* NSError+YMFoundation.m */; };
 		6D6DED8EF7D421391751902E /* YMAsyncBlockUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEE0627DF2A8E10CE66F1 /* YMAsyncBlockUtils.m */; };
 		6D6DEDE3A75FAB356CC02FDC /* YMJSONTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE832C7AC833E1587F23C /* YMJSONTransformer.m */; };
 		6D6DEF24A85E3B761F3C709F /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE4D7AB7F5233D0E04C4B /* NSDate+ISO8601.m */; };
@@ -59,6 +59,7 @@
 		69C1DF991BF8EE18006F7304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C1DF9C1BF8EE18006F7304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6DE068FD7119DBA15F70F3 /* NSError+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+YMFoundation.m"; sourceTree = "<group>"; };
 		6D6DE13E274C41654F617F89 /* NSDictionary+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMFoundation.m"; sourceTree = "<group>"; };
 		6D6DE155D689D6E9E4FB9F3C /* M13OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13OrderedDictionary.h; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
@@ -80,15 +81,15 @@
 		6D6DE64B11B1B9D6AA399899 /* NSURL+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		6D6DE64F79E1437F0975E49D /* CMDQueryStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringValueTransformer.m; sourceTree = "<group>"; };
 		6D6DE65A5187BEA5EFA7CF49 /* YMAsyncCallbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncCallbackStore.h; sourceTree = "<group>"; };
-		6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+YMFoundation.m"; sourceTree = "<group>"; };
+		6D6DE7C8B0A8FC1818DCE660 /* YMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMError.h; sourceTree = "<group>"; };
 		6D6DE822F5F562E03B928494 /* ISO8601Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601Serialization.h; sourceTree = "<group>"; };
 		6D6DE832C7AC833E1587F23C /* YMJSONTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMJSONTransformer.m; sourceTree = "<group>"; };
-		6D6DE8853E06ADEE2988BDF7 /* NSError+YMFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+YMFoundation.h"; sourceTree = "<group>"; };
 		6D6DE8EF6E957301EA1BD04D /* YMLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMLoader.h; sourceTree = "<group>"; };
 		6D6DE91510B416C80EACB4E7 /* ISO8601Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601Serialization.m; sourceTree = "<group>"; };
 		6D6DE95E17C7A58A643CA98E /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
 		6D6DE9A2A984EA2241CC0F95 /* NSURL+CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CMDQueryStringSerialization.m"; sourceTree = "<group>"; };
 		6D6DEA62E2319931E33B0FED /* CMDQueryStringValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDQueryStringValueTransformer.h; sourceTree = "<group>"; };
+		6D6DEA9A3CCD3AAA9CC03910 /* NSError+YMFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+YMFoundation.h"; sourceTree = "<group>"; };
 		6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncDispatchUtils.m; sourceTree = "<group>"; };
 		6D6DEAB786AFA6A5B1BD0298 /* YMLoaderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMLoaderProxy.h; sourceTree = "<group>"; };
 		6D6DEAB8D7BA9E4A8E06050A /* YMAsyncQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueue.m; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 				692EA8241BF8FD43002AB696 /* YMRequest */,
 				692EA8251BF8FD43002AB696 /* YMRouter */,
 				6D6DE3A03E260B60F95F0C40 /* YMUtils */,
+				6D6DECA12423DB42A3694BFE /* YMError */,
 			);
 			path = YMFoundation;
 			sourceTree = "<group>";
@@ -271,8 +273,6 @@
 				6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */,
 				6D6DEF7935140F114393301B /* YMUtils.h */,
 				6D6DEF7C6390F2E4C6A00B70 /* YMUtilsSuppressMacros.h */,
-				6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */,
-				6D6DE8853E06ADEE2988BDF7 /* NSError+YMFoundation.h */,
 				6D6DE1F4A910885FEFE2CF0E /* YMUtilsSystemInfoMacros.h */,
 				6D6DE13E274C41654F617F89 /* NSDictionary+YMFoundation.m */,
 				6D6DE46E953CA679DBD77A48 /* NSDictionary+YMFoundation.h */,
@@ -300,6 +300,16 @@
 				6D6DE5E2169917BA10B83696 /* NSString+CMDQueryStringSerialization.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6D6DECA12423DB42A3694BFE /* YMError */ = {
+			isa = PBXGroup;
+			children = (
+				6D6DEA9A3CCD3AAA9CC03910 /* NSError+YMFoundation.h */,
+				6D6DE068FD7119DBA15F70F3 /* NSError+YMFoundation.m */,
+				6D6DE7C8B0A8FC1818DCE660 /* YMError.h */,
+			);
+			path = YMError;
 			sourceTree = "<group>";
 		};
 		95E9D08F6EC7348AA4AAAE20 /* Frameworks */ = {
@@ -405,9 +415,9 @@
 				6D6DE627F423C4804F177979 /* YMRouter.m in Sources */,
 				6D6DE2B200AE6549CDD672CE /* YMLoader.m in Sources */,
 				6D6DEFE9374D8B1D10FAD207 /* YMLoaderProxy.m in Sources */,
-				6D6DE7CEB0A7BB4829DDF7CE /* NSError+YMFoundation.m in Sources */,
 				6D6DE67E35F16968C98112A7 /* YMLocale.m in Sources */,
 				6D6DE403433C605D2615DC1F /* NSDictionary+YMFoundation.m in Sources */,
+				6D6DED697FA99BDFA7269C58 /* NSError+YMFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

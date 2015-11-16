@@ -13,5 +13,4 @@
 #define YMOrderedDictionary M13OrderedDictionary
 #define YMMutableOrderedDictionary M13MutableOrderedDictionary
 
-#import <YMFoundation/NSError+YMFoundation.h>
 #import <YMFoundation/NSDictionary+YMFoundation.h>

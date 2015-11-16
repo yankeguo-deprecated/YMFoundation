@@ -38,6 +38,7 @@ Pod::Spec.new do |s|
   # All others
   [
     "YMAsync",
+    "YMError",
     "YMJSON",
     "YMLoader",
     "YMRequest",
