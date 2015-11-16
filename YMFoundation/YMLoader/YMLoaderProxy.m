@@ -18,9 +18,11 @@
 + (instancetype)proxy {
   return [self new];
 }
+
 + (instancetype)new {
   return [[self alloc] init];
 }
+
 - (instancetype)init {
   _registry = [[NSMutableDictionary alloc] init];
   [self build];

@@ -26,6 +26,7 @@
 		6D6DE62B68CA0454C1DD901D /* YMAsyncDispatchUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAB3311A95476E45C686 /* YMAsyncDispatchUtils.m */; };
 		6D6DE6F4F7AAF7AED73EE104 /* YMJSONMappingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEBDD181801FB1E8AE1E2 /* YMJSONMappingItem.m */; };
 		6D6DE77FF7E4D4FFC2330CF0 /* NSString+CMDQueryStringSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE5E2169917BA10B83696 /* NSString+CMDQueryStringSerialization.m */; };
+		6D6DE7CEB0A7BB4829DDF7CE /* NSError+YMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */; };
 		6D6DE7DEB11138B163CA0793 /* YMAsyncCallbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */; };
 		6D6DE862FF0574E03C9C07D5 /* YMAsyncThresholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */; };
 		6D6DE8E469FD9BDE6821460F /* ISO8601Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE91510B416C80EACB4E7 /* ISO8601Serialization.m */; };
@@ -74,8 +75,10 @@
 		6D6DE64B11B1B9D6AA399899 /* NSURL+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		6D6DE64F79E1437F0975E49D /* CMDQueryStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringValueTransformer.m; sourceTree = "<group>"; };
 		6D6DE65A5187BEA5EFA7CF49 /* YMAsyncCallbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncCallbackStore.h; sourceTree = "<group>"; };
+		6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+YMFoundation.m"; sourceTree = "<group>"; };
 		6D6DE822F5F562E03B928494 /* ISO8601Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601Serialization.h; sourceTree = "<group>"; };
 		6D6DE832C7AC833E1587F23C /* YMJSONTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMJSONTransformer.m; sourceTree = "<group>"; };
+		6D6DE8853E06ADEE2988BDF7 /* NSError+YMFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+YMFoundation.h"; sourceTree = "<group>"; };
 		6D6DE8EF6E957301EA1BD04D /* YMLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMLoader.h; sourceTree = "<group>"; };
 		6D6DE91510B416C80EACB4E7 /* ISO8601Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601Serialization.m; sourceTree = "<group>"; };
 		6D6DE95E17C7A58A643CA98E /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */,
 				6D6DEF7935140F114393301B /* YMUtils.h */,
 				6D6DEF7C6390F2E4C6A00B70 /* YMUtilsSuppressMacros.h */,
+				6D6DE795B0057A6663E6D063 /* NSError+YMFoundation.m */,
+				6D6DE8853E06ADEE2988BDF7 /* NSError+YMFoundation.h */,
 			);
 			path = YMUtils;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				6D6DE627F423C4804F177979 /* YMRouter.m in Sources */,
 				6D6DE2B200AE6549CDD672CE /* YMLoader.m in Sources */,
 				6D6DEFE9374D8B1D10FAD207 /* YMLoaderProxy.m in Sources */,
+				6D6DE7CEB0A7BB4829DDF7CE /* NSError+YMFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

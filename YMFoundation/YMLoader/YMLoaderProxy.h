@@ -9,7 +9,7 @@
 
 @interface YMLoaderProxy: NSObject
 
-@property(nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *registry;
+@property(nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *__nonnull registry;
 
 /**
  * Get the loader used in this proxy, default implementation use [YMLoader sharedLoader]
