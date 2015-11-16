@@ -46,7 +46,6 @@
 		692EA8261BF8FF53002AB696 /* YMAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAsync.h; sourceTree = "<group>"; };
 		692EA8271BF8FF64002AB696 /* YMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLogger.h; sourceTree = "<group>"; };
 		692EA84B1BF900FA002AB696 /* YMJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMJSON.h; sourceTree = "<group>"; };
-		692EA84E1BF90139002AB696 /* YMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRequest.h; sourceTree = "<group>"; };
 		692EA84F1BF9014D002AB696 /* YMRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRouter.h; sourceTree = "<group>"; };
 		692EA8501BF904AD002AB696 /* UALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UALogger.h; sourceTree = "<group>"; };
 		692EA8511BF904AD002AB696 /* UALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UALogger.m; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		69C1DF9E1BF8EE18006F7304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6DE068FD7119DBA15F70F3 /* NSError+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+YMFoundation.m"; sourceTree = "<group>"; };
 		6D6DE07F4855B6DDC3584825 /* NSString+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
+		6D6DE09C9AFD07114D5EC190 /* YMHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHTTP.h; sourceTree = "<group>"; };
 		6D6DE0C8762109626BFB25C8 /* NSString+CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CMDQueryStringSerialization.m"; sourceTree = "<group>"; };
 		6D6DE0EBE938A2F306515001 /* NSURL+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		6D6DE13E274C41654F617F89 /* NSDictionary+YMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMFoundation.m"; sourceTree = "<group>"; };
@@ -136,10 +136,10 @@
 				692EA8211BF8FD43002AB696 /* YMLoader */,
 				692EA8221BF8FD43002AB696 /* YMLocale */,
 				692EA8231BF8FD43002AB696 /* YMLogger */,
-				692EA8241BF8FD43002AB696 /* YMRequest */,
 				692EA8251BF8FD43002AB696 /* YMRouter */,
 				6D6DE3A03E260B60F95F0C40 /* YMUtils */,
 				6D6DECA12423DB42A3694BFE /* YMError */,
+				6D6DEB2DB7935ABE67D23456 /* YMHTTP */,
 			);
 			path = YMFoundation;
 			sourceTree = "<group>";
@@ -209,14 +209,6 @@
 				6D6DE21444ED16FDE82845FF /* YMLogger.m */,
 			);
 			path = YMLogger;
-			sourceTree = "<group>";
-		};
-		692EA8241BF8FD43002AB696 /* YMRequest */ = {
-			isa = PBXGroup;
-			children = (
-				692EA84E1BF90139002AB696 /* YMRequest.h */,
-			);
-			path = YMRequest;
 			sourceTree = "<group>";
 		};
 		692EA8251BF8FD43002AB696 /* YMRouter */ = {
@@ -297,6 +289,14 @@
 				6D6DEFD6F6BAFC86B056DBED /* NSURL+CMDQueryStringSerialization.m */,
 			);
 			path = YMUtils;
+			sourceTree = "<group>";
+		};
+		6D6DEB2DB7935ABE67D23456 /* YMHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				6D6DE09C9AFD07114D5EC190 /* YMHTTP.h */,
+			);
+			path = YMHTTP;
 			sourceTree = "<group>";
 		};
 		6D6DECA12423DB42A3694BFE /* YMError */ = {

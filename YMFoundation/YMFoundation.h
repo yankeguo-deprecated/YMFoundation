@@ -13,5 +13,5 @@
 #import <YMFoundation/YMError.h>
 #import <YMFoundation/YMJSON.h>
 #import <YMFoundation/YMLocale.h>
-#import <YMFoundation/YMRequest.h>
+#import <YMFoundation/YMHTTP.h>
 #import <YMFoundation/YMRouter.h>
