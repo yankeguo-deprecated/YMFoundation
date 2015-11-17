@@ -15,6 +15,6 @@
 /**
  *  在 valueFactory 存在的情况下, 如果为 nil 自动创建对象
  */
-- (ObjectType __nonnull)objectDefiniteForKey:(KeyType)key;
+- (ObjectType __nonnull)objectDefiniteForKey:(KeyType __nonnull)key;
 
 @end

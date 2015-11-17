@@ -12,7 +12,7 @@ static const void *YMFoundationNSMutableDictionaryValueFactoryKey = &YMFoundatio
 @implementation NSMutableDictionary (YMFoundation)
 
 - (id (^)())valueFactory {
-  objc_getAssociatedObject(self, YMFoundationNSMutableDictionaryValueFactoryKey);
+  return objc_getAssociatedObject(self, YMFoundationNSMutableDictionaryValueFactoryKey);
 }
 
 - (void)setValueFactory:(id (^)())valueFactory {
