@@ -19,4 +19,5 @@
 #define YMMutableOrderedDictionary M13MutableOrderedDictionary
 
 #import <YMFoundation/NSDictionary+YMFoundation.h>
+#import <YMFoundation/NSMutableDictionary+YMFoundation.h>
 #import <YMFoundation/NSUserDefaults+YMFoundation.h>
