@@ -9,15 +9,21 @@ extern const NSString *__nonnull YMHTTPErrorDomain;
 
 typedef NS_ENUM(NSInteger, YMHTTPErrorCode) {
   /**
-   * Cancelled, locale_key = error.http_cancelled
+   * Cancelled
+   *
+   * i18n(error.http_cancelled)
    */
       YMHTTPErrorCodeCancelled,
   /**
-   * Bad Response, locale_key = error.http_bad_response
+   * Bad Response
+   *
+   * i18n(error.http_bad_response)
    */
       YMHTTPErrorCodeBadResponse,
   /**
-   * Bad Network, locale_key = error.http_bad_network
+   * Bad Network
+   *
+   * i18n(error.http_bad_network)
    */
       YMHTTPErrorCodeBadNetwork,
 };

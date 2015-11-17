@@ -19,20 +19,21 @@ const NSString *YMHTTPErrorDomain = @"com.juxian.YMFoundation.YMHTTP.error";
 + (instancetype)YMHTTPBadResponse {
   return [(NSError *) [[self class] alloc] initWithDomain:[YMHTTPErrorDomain copy]
                                                      code:YMHTTPErrorCodeBadResponse
-                                               errorLevel:YMErrorLevelBlocking
+                                               errorLevel:YMErrorLevelHigh
                                               description:L(error.http_bad_response)];
 }
 
 + (instancetype)YMHTTPBadNetwork {
   return [(NSError *) [[self class] alloc] initWithDomain:[YMHTTPErrorDomain copy]
                                                      code:YMHTTPErrorCodeBadNetwork
-                                               errorLevel:YMErrorLevelBlocking
+                                               errorLevel:YMErrorLevelHigh
                                               description:L(error.http_bad_network)];
 }
 
 + (instancetype)YMHTTPCancelled {
   return [(NSError *) [[self class] alloc] initWithDomain:[YMHTTPErrorDomain copy]
                                                      code:YMHTTPErrorCodeCancelled
+                                                    fatal:NO
                                                errorLevel:YMErrorLevelIgnored
                                               description:L(error.http_cancelled)];
 }
