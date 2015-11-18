@@ -50,4 +50,11 @@
  */
 - (BOOL)respondsToSelector:(SEL __nonnull)aSelector;
 
+/**
+ *  执行验证方法,从 self.loader 中拿到所有依赖项,并验证其能够执行注册的方法(respondsToSelector:)
+ *
+ *  @return 验证是否成功
+ */
+- (BOOL)validate;
+
 @end

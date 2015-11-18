@@ -55,4 +55,31 @@
   return [[self loader] hasObjectForKey:loaderKey];
 }
 
+- (BOOL)validate {
+  __block BOOL success = YES;
+  [self.registry enumerateKeysAndObjectsUsingBlock:^(NSString *selectorName, NSString *loaderKey, BOOL *stop) {
+    //  Get target
+    id target = [[self loader] objectForKey:loaderKey];
+    //  Get selector
+    SEL sel = NSSelectorFromString(selectorName);
+    //  Test
+    BOOL match = [target respondsToSelector:sel];
+    //  Assert
+    NSAssert(match, @"Target %@ cannot responds to selector %@", target, selectorName);
+    //  Update success flag
+    success &= match;
+    //  Stop if not match
+    if (!match) *stop = YES;
+  }];
+  return success;
+}
+
+- (NSString *)debugDescription {
+  NSMutableString *mutableString = [[NSMutableString alloc] initWithString:NSStringFromClass([self class])];
+  [self.registry enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
+    [mutableString appendFormat:@"\n %@ -> %@", key, obj];
+  }];
+  return [mutableString copy];
+}
+
 @end
