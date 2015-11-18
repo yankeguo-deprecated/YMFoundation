@@ -3,9 +3,11 @@
 // Copyright (c) 2015 YMXian. All rights reserved.
 //
 
-#import <objc/runtime.h>
 #import "YMLoaderProxy.h"
 
+#import <objc/runtime.h>
+
+#import "YMLogger.h"
 #import "YMLoader.h"
 
 @implementation YMLoaderProxy
@@ -66,8 +68,11 @@
     SEL sel = NSSelectorFromString(selectorName);
     //  Test
     BOOL match = [self respondsToSelector:sel];
-    //  Assert
-    NSAssert(match, @"%@ cannot responds to selector %@", self, selectorName);
+    if (match) {
+      DLog(@"YMLoaderProxy PASS %@ - %@", self, selectorName);
+    } else {
+      NSAssert(NO, @"%@ cannot responds to selector %@", self, selectorName);
+    }
     //  Update success flag
     success &= match;
     //  Stop if not match
@@ -102,11 +107,16 @@
       //  Validate method
       struct objc_method_description method = allMethods[j];
       BOOL match = [self respondsToSelector:method.name];
-      NSAssert(match,
-               @"%@ can not responds to %@ in protocol %@",
-               self,
-               NSStringFromSelector(method.name),
-               NSStringFromProtocol(aProtocol));
+
+      if (match) {
+        DLog(@"YMLoaderProxy PASS %@ - %@", self, NSStringFromSelector(method.name));
+      } else {
+        NSAssert(NO,
+                 @"%@ can not responds to %@ in protocol %@",
+                 self,
+                 NSStringFromSelector(method.name),
+                 NSStringFromProtocol(aProtocol));
+      }
 
       //  Record success
       success &= match;
