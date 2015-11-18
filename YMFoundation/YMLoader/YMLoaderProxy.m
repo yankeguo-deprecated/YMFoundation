@@ -3,6 +3,7 @@
 // Copyright (c) 2015 YMXian. All rights reserved.
 //
 
+#import <objc/runtime.h>
 #import "YMLoaderProxy.h"
 
 #import "YMLoader.h"
@@ -33,44 +34,91 @@
   return self.registry[NSStringFromSelector(aSelector)];
 }
 
+- (id)targetForSelector:(SEL)aSelector {
+  NSString *loaderKey = [self loaderKeyForSelector:aSelector];
+  if (loaderKey == nil) return nil;
+  return [[self loader] objectForKey:loaderKey];
+}
+
 - (void)use:(NSString *__nonnull)loaderKey forSelector:(SEL __nonnull)aSelector {
   self.registry[NSStringFromSelector(aSelector)] = loaderKey;
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation {
-  NSObject *obj = [[self loader] objectForKey:[self loaderKeyForSelector:invocation.selector]];
+  NSObject *obj = [self targetForSelector:invocation.selector];
   [invocation invokeWithTarget:obj];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-  NSObject *obj = [[self loader] objectForKey:[self loaderKeyForSelector:sel]];
+  NSObject *obj = [self targetForSelector:sel];
   return [obj methodSignatureForSelector:sel];
 }
 
 - (BOOL)respondsToSelector:(SEL __nonnull)aSelector {
-  NSString *loaderKey = [self loaderKeyForSelector:aSelector];
-  if (loaderKey == nil) {
-    return NO;
-  }
-  return [[self loader] hasObjectForKey:loaderKey];
+  return [[self targetForSelector:aSelector] respondsToSelector:aSelector];
 }
 
 - (BOOL)validate {
   __block BOOL success = YES;
+
+  //  Validate registry
   [self.registry enumerateKeysAndObjectsUsingBlock:^(NSString *selectorName, NSString *loaderKey, BOOL *stop) {
-    //  Get target
-    id target = [[self loader] objectForKey:loaderKey];
-    //  Get selector
     SEL sel = NSSelectorFromString(selectorName);
     //  Test
-    BOOL match = [target respondsToSelector:sel];
+    BOOL match = [self respondsToSelector:sel];
     //  Assert
-    NSAssert(match, @"Target %@ cannot responds to selector %@", target, selectorName);
+    NSAssert(match, @"%@ cannot responds to selector %@", self, selectorName);
     //  Update success flag
     success &= match;
     //  Stop if not match
     if (!match) *stop = YES;
   }];
+
+  //  Validate protocol
+  unsigned int allProtocolsCount = 0;
+  Protocol *const *allProtocols = class_copyProtocolList([self class], &allProtocolsCount);
+  for (unsigned int i = 0; i < allProtocolsCount; i++) {
+    //  Break if already failed
+    if (!success) break;
+
+    //  Get the protocol
+    Protocol *const aProtocol = allProtocols[i];
+
+    //  Skip NSObject Protocol
+    if ([NSStringFromProtocol(aProtocol) isEqualToString:@"NSObject"]) {
+      continue;
+    }
+
+    //  Get all methods
+    unsigned int allMethodsCount = 0;
+    struct objc_method_description
+        *allMethods = protocol_copyMethodDescriptionList(aProtocol, NO, NO, &allMethodsCount);
+
+    //  Walk through all methods
+    for (unsigned int j = 0; j < allMethodsCount; j++) {
+      //  Break if already failed
+      if (!success) break;
+
+      //  Validate method
+      struct objc_method_description method = allMethods[j];
+      BOOL match = [self respondsToSelector:method.name];
+      NSAssert(match,
+               @"%@ can not responds to %@ in protocol %@",
+               self,
+               NSStringFromSelector(method.name),
+               NSStringFromProtocol(aProtocol));
+
+      //  Record success
+      success &= match;
+    }
+
+    //  Clean up
+    free(allMethods);
+  }
+
+  //  Clean up
+  free((void *) allProtocols);
+
   return success;
 }
 
