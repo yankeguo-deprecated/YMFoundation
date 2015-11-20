@@ -21,3 +21,7 @@ CGSize CGSizeAspectFill(CGSize target, CGSize source) {
     return CGSizeMake(source.width * heightScale, target.height);
   }
 }
+
+CGSize CGSizeScale(CGSize source, CGFloat scale) {
+  return CGSizeMake(source.width * scale, source.height * scale);
+}

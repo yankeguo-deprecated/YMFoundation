@@ -8,3 +8,5 @@
 extern CGPoint CGRectGetCenter(CGRect rect);
 
 extern CGSize CGSizeAspectFill(CGSize target, CGSize source);
+
+extern CGSize CGSizeScale(CGSize source, CGFloat scale);
