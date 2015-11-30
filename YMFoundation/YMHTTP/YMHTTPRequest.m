@@ -64,6 +64,10 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
   return _URLRequest;
 }
 
+- (void)setURLResponse:(NSHTTPURLResponse *)URLResponse {
+  _URLResponse = URLResponse;
+}
+
 - (NSArray<id<YMHTTPResponseTransformer>> *)responseTransformers {
   return _transformers;
 }
@@ -278,6 +282,7 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
   return ^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
     dispatch_async(dispatch_get_main_queue(), ^{
       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+      self.URLResponse = httpResponse;
       //  Process incoming error
       if (error) {
         [self invokeFailureWithError:[self applyTransformWithError:error]];

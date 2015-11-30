@@ -75,6 +75,11 @@ typedef void
 @property(nonatomic, readonly, strong) NSURLRequest *__nullable URLRequest;
 
 /**
+ *  请求返回对象
+ */
+@property(nonatomic, readonly, strong) NSHTTPURLResponse * __nullable URLResponse;
+
+/**
  *  请求构建出来的 dataTask
  */
 @property(nonatomic, readonly, strong) NSURLSessionDataTask *__nullable dataTask;
