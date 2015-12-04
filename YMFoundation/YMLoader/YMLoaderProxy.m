@@ -97,7 +97,7 @@
     //  Get all methods
     unsigned int allMethodsCount = 0;
     struct objc_method_description
-        *allMethods = protocol_copyMethodDescriptionList(aProtocol, NO, NO, &allMethodsCount);
+        *allMethods = protocol_copyMethodDescriptionList(aProtocol, YES, YES, &allMethodsCount);
 
     //  Walk through all methods
     for (unsigned int j = 0; j < allMethodsCount; j++) {
