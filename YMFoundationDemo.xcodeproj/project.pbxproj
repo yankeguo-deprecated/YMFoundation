@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69019EF71C1724BA00D45622 /* YMMinIntervalScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 69019EF61C1724BA00D45622 /* YMMinIntervalScheduler.m */; };
 		692EA8521BF904AD002AB696 /* UALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA8511BF904AD002AB696 /* UALogger.m */; };
 		69B587491C17095A0086C2A0 /* YMUtilsSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B587481C17095A0086C2A0 /* YMUtilsSystemInfo.m */; };
 		69C1DF8F1BF8EE18006F7304 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF8E1BF8EE18006F7304 /* main.m */; };
@@ -52,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69019EF51C1724BA00D45622 /* YMMinIntervalScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMinIntervalScheduler.h; sourceTree = "<group>"; };
+		69019EF61C1724BA00D45622 /* YMMinIntervalScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMinIntervalScheduler.m; sourceTree = "<group>"; };
 		692EA81E1BF8FB8C002AB696 /* YMFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFoundation.h; sourceTree = "<group>"; };
 		692EA8261BF8FF53002AB696 /* YMAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAsync.h; sourceTree = "<group>"; };
 		692EA8271BF8FF64002AB696 /* YMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLogger.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				6D6DEAD8CD50804B78A24E22 /* YMAsyncCallbackStore.m */,
 				6D6DEED8C50F59D8281F7D42 /* YMAsyncThresholder.h */,
 				6D6DE303D19FB451A25C78C8 /* YMAsyncThresholder.m */,
+				69019EF51C1724BA00D45622 /* YMMinIntervalScheduler.h */,
+				69019EF61C1724BA00D45622 /* YMMinIntervalScheduler.m */,
 			);
 			path = YMAsync;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C1DF951BF8EE18006F7304 /* ViewController.m in Sources */,
+				69019EF71C1724BA00D45622 /* YMMinIntervalScheduler.m in Sources */,
 				69C1DF921BF8EE18006F7304 /* AppDelegate.m in Sources */,
 				69C1DF8F1BF8EE18006F7304 /* main.m in Sources */,
 				692EA8521BF904AD002AB696 /* UALogger.m in Sources */,

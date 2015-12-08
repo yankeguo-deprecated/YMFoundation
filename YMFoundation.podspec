@@ -76,6 +76,7 @@ Pod::Spec.new do |s|
     sp.source_files = "YMFoundation/YMAsync/**/*.{h,m}"
 
     sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
   end
 
   # YMJSON

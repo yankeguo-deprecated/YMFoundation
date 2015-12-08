@@ -11,3 +11,4 @@
 #import <YMFoundation/YMAsyncDispatchUtils.h>
 #import <YMFoundation/YMAsyncQueue.h>
 #import <YMFoundation/YMAsyncThresholder.h>
+#import <YMFoundation/YMMinIntervalScheduler.h>
