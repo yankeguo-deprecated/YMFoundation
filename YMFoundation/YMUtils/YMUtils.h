@@ -6,7 +6,8 @@
 //
 
 #import <YMFoundation/YMUtilsSuppressMacros.h>
-#import <YMFoundation/YMUtilsSystemInfoMacros.h>
+
+#import <YMFoundation/YMUtilsSystemInfo.h>
 
 #import <YMFoundation/ISO8601Serialization.h>
 #import <YMFoundation/NSDate+ISO8601.h>
@@ -21,3 +22,5 @@
 #import <YMFoundation/NSDictionary+YMFoundation.h>
 #import <YMFoundation/NSMutableDictionary+YMFoundation.h>
 #import <YMFoundation/NSUserDefaults+YMFoundation.h>
+
+#import <YMFoundation/CGGeometry+YMFoundation.h>

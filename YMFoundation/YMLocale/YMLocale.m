@@ -6,7 +6,7 @@
 #import "YMLocale.h"
 
 #import "YMLogger.h"
-#import "YMUtilsSystemInfoMacros.h"
+#import "YMUtilsSystemInfo.h"
 #import "NSDictionary+YMFoundation.h"
 
 void YMLocaleLoad(BOOL cacheEnabled) {
