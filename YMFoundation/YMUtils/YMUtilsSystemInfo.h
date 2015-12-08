@@ -1,10 +1,14 @@
 //
-//  YMUtilsSystemInfoMacros.h
+//  YMUtilsSystemInfo.h
 //  YMFoundationDemo
 //
-//  Created by Yanke Guo on 15/11/16.
-//  Copyright (c) 2015 YMXian. All rights reserved.
+//  Created by Yanke Guo on 15/12/8.
+//  Copyright © 2015年 YMXian. All rights reserved.
 //
+
+#import <Foundation/Foundation.h>
+
+#pragma mark - Macros
 
 #define AppBundleIdentifier ([NSBundle mainBundle].infoDictionary[@"CFBundleIdentifier"])
 #define AppVersionShort     ([NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"])
@@ -18,3 +22,7 @@
 
 #define AppCacheDirectory ((NSString*)[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject])
 #define AppDocumentDirectory ((NSString*)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject])
+
+#pragma mark - Functions
+
+uint64_t YMGetDeviceUptimeInMilliseconds();

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		692EA8521BF904AD002AB696 /* UALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA8511BF904AD002AB696 /* UALogger.m */; };
+		69B587491C17095A0086C2A0 /* YMUtilsSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B587481C17095A0086C2A0 /* YMUtilsSystemInfo.m */; };
 		69C1DF8F1BF8EE18006F7304 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF8E1BF8EE18006F7304 /* main.m */; };
 		69C1DF921BF8EE18006F7304 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF911BF8EE18006F7304 /* AppDelegate.m */; };
 		69C1DF951BF8EE18006F7304 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1DF941BF8EE18006F7304 /* ViewController.m */; };
@@ -58,6 +59,8 @@
 		692EA84F1BF9014D002AB696 /* YMRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRouter.h; sourceTree = "<group>"; };
 		692EA8501BF904AD002AB696 /* UALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UALogger.h; sourceTree = "<group>"; };
 		692EA8511BF904AD002AB696 /* UALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UALogger.m; sourceTree = "<group>"; };
+		69B587471C17095A0086C2A0 /* YMUtilsSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUtilsSystemInfo.h; sourceTree = "<group>"; };
+		69B587481C17095A0086C2A0 /* YMUtilsSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMUtilsSystemInfo.m; sourceTree = "<group>"; };
 		69C1DF8A1BF8EE18006F7304 /* YMFoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMFoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C1DF8E1BF8EE18006F7304 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69C1DF901BF8EE18006F7304 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		6D6DE155D689D6E9E4FB9F3C /* M13OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13OrderedDictionary.h; sourceTree = "<group>"; };
 		6D6DE179F4993AA11F2F0513 /* YMAsyncQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAsyncQueue.h; sourceTree = "<group>"; };
 		6D6DE1AA969337A01A616803 /* YMClassCheckTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMClassCheckTransformer.m; sourceTree = "<group>"; };
-		6D6DE1F4A910885FEFE2CF0E /* YMUtilsSystemInfoMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUtilsSystemInfoMacros.h; sourceTree = "<group>"; };
 		6D6DE1F755A3C4ECFF7BDC9D /* YMHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMHTTPRequest.m; sourceTree = "<group>"; };
 		6D6DE2139B635756EC0071EF /* NSError+YMHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+YMHTTP.h"; sourceTree = "<group>"; };
 		6D6DE21444ED16FDE82845FF /* YMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMLogger.m; sourceTree = "<group>"; };
@@ -295,7 +297,6 @@
 				6D6DE50F5A127DADEF706894 /* M13OrderedDictionary.m */,
 				6D6DEF7935140F114393301B /* YMUtils.h */,
 				6D6DEF7C6390F2E4C6A00B70 /* YMUtilsSuppressMacros.h */,
-				6D6DE1F4A910885FEFE2CF0E /* YMUtilsSystemInfoMacros.h */,
 				6D6DE13E274C41654F617F89 /* NSDictionary+YMFoundation.m */,
 				6D6DE46E953CA679DBD77A48 /* NSDictionary+YMFoundation.h */,
 				6D6DE8E689431D4699579819 /* NSDate+ISO8601.m */,
@@ -319,6 +320,8 @@
 				6D6DE139321F283D76762223 /* NSMutableDictionary+YMFoundation.h */,
 				6D6DE3A2C52DF71DB368D585 /* CGGeometry+YMFoundation.m */,
 				6D6DEBB57AE321F48AE82517 /* CGGeometry+YMFoundation.h */,
+				69B587471C17095A0086C2A0 /* YMUtilsSystemInfo.h */,
+				69B587481C17095A0086C2A0 /* YMUtilsSystemInfo.m */,
 			);
 			path = YMUtils;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				6D6DEA070CD056B0367E91B7 /* YMHTTPRequest.m in Sources */,
 				6D6DE50A54BD527F7463EB64 /* YMKeyPathTransformer.m in Sources */,
 				6D6DECA9FCBA5EE1014B1D86 /* YMJSONModelTransformer.m in Sources */,
+				69B587491C17095A0086C2A0 /* YMUtilsSystemInfo.m in Sources */,
 				6D6DEFBED78E7983EF0BB8EB /* YMJSONResponseTransformer.m in Sources */,
 				6D6DE09767D53A1B9D75D65A /* YMClassCheckTransformer.m in Sources */,
 				6D6DE9E851797E3555CD43F7 /* NSError+YMHTTP.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "YMUtilsSystemInfoMacros.h"
+#import "YMUtilsSystemInfo.h"
 
 @interface AppDelegate ()
 
