@@ -17,6 +17,25 @@ Pod::Spec.new do |s|
 
   # Basic Modules
 
+  # YMRAC, Wrapper for ReactiveCocoa 2.5
+  s.subspec "YMRAC" do |sp|
+    sp.default_subspecs = "UI"
+    sp.subspec "no-arc" do |spp|
+      spp.source_files = "YMFoundation/YMRAC/RACObjCRuntime.{h,m}"
+      spp.requires_arc = false
+    end
+    sp.subspec "Core" do |spp|
+      spp.source_files = ["YMFoundation/YMRAC/*.{d,h,m}", "YMFoundation/YMRAC/extobjc/*.{h,m}"]
+      spp.private_header_files = "YMFoundation/YMRAC/*Private.h"
+      spp.exclude_files = "YMFoundation/YMRAC/*{RACObjCRuntime,UI,MK}*"
+      spp.dependency "YMFoundation/YMRAC/no-arc"
+    end
+    sp.subspec "UI" do |spp|
+      spp.source_files = "YMFoundation/YMRAC/*{UI,MK}*"
+      spp.dependency "YMFoundation/YMRAC/Core"
+    end
+  end
+
   # YMLogger
   s.subspec "YMLogger" do |sp|
     sp.source_files = "YMFoundation/YMLogger/**/*.{h,m}"

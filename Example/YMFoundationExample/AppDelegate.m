@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <YMFoundation/YMRAC.h>
 
 @interface AppDelegate ()
 
