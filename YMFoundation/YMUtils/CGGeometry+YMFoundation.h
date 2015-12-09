@@ -5,8 +5,10 @@
 
 #import <UIKit/UIKit.h>
 
-extern CGPoint CGRectGetCenter(CGRect rect);
+UIKIT_EXTERN CGPoint CGRectGetCenter(CGRect rect);
 
-extern CGSize CGSizeAspectFill(CGSize target, CGSize source);
+UIKIT_EXTERN CGSize CGSizeAspectFill(CGSize target, CGSize source);
 
-extern CGSize CGSizeScale(CGSize source, CGFloat scale);
+UIKIT_EXTERN CGRect CGRectMakeWithSizeCenter(CGSize size, CGPoint center);
+
+UIKIT_EXTERN CGSize CGSizeScale(CGSize source, CGFloat scale);

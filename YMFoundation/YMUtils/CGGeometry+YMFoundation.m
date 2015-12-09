@@ -25,3 +25,7 @@ CGSize CGSizeAspectFill(CGSize target, CGSize source) {
 CGSize CGSizeScale(CGSize source, CGFloat scale) {
   return CGSizeMake(source.width * scale, source.height * scale);
 }
+
+CGRect CGRectMakeWithSizeCenter(CGSize size, CGPoint center) {
+  return CGRectMake(center.x - size.width/2, center.y - size.height/2, size.width, size.height);
+}
