@@ -1,5 +1,7 @@
 # YMFoundation
 
+[![Build Status](https://travis-ci.org/YMXian/YMFoundation.svg)](https://travis-ci.org/YMXian/YMFoundation)
+
 一米鲜 iOS App 基础库合集
 
 # 介绍
