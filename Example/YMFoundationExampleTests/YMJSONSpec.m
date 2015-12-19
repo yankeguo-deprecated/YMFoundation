@@ -6,10 +6,6 @@
 //  Copyright © 2015年 YANKE Guo. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-
-#import "YMFoundationTestsHelper.h"
-
 @interface SampleModel : YMJSON
 
 @property (nonatomic, strong) NSString * id;

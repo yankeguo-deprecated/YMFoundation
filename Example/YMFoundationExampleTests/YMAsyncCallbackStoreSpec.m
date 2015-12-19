@@ -6,8 +6,6 @@
 //  Copyright © 2015年 YMXian. All rights reserved.
 //
 
-#import "YMFoundationTestsHelper.h"
-
 typedef void(^YMTestCallback) (NSString* __nullable result);
 
 SpecBegin(YMAsyncCallbackStore)

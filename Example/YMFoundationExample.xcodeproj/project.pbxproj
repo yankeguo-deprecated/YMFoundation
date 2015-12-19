@@ -36,6 +36,7 @@
 		35CAE02FF7DF7FA01427122A /* Pods-YMFoundationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMFoundationExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMFoundationExample/Pods-YMFoundationExample.debug.xcconfig"; sourceTree = "<group>"; };
 		3796FF00253809AED10919EE /* libPods-YMFoundationExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F2253F50A0DAAF5DC516ED /* libPods-YMFoundationExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692DD4901C253F4600235640 /* YMFoundationExampleTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMFoundationExampleTests-Prefix.pch"; sourceTree = "<group>"; };
 		692EA8311BF8FF9E002AB696 /* YMFoundationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMFoundationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692EA8351BF8FF9E002AB696 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		692EA8371BF8FF9E002AB696 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		692EA8431BF8FF9E002AB696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		692EA8451BF8FF9E002AB696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6966C2B41BF9144D003B59A1 /* YMFoundationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMFoundationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6966C2B61BF9144D003B59A1 /* YMFoundationTestsHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFoundationTestsHelper.h; sourceTree = "<group>"; };
 		6966C2B81BF9144D003B59A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		697664891BF91507000F3210 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueueSpec.m; sourceTree = "<group>"; };
@@ -148,11 +148,11 @@
 		6966C2B51BF9144D003B59A1 /* YMFoundationExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				692DD4901C253F4600235640 /* YMFoundationExampleTests-Prefix.pch */,
 				69EEBFDB1BF9431C0076AF14 /* YMRouterSpec.m */,
 				69EEBFD91BF93D890076AF14 /* YMJSONSpec.m */,
 				6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */,
 				6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */,
-				6966C2B61BF9144D003B59A1 /* YMFoundationTestsHelper.h */,
 				6966C2B81BF9144D003B59A1 /* Info.plist */,
 				6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */,
 			);
@@ -517,6 +517,7 @@
 			baseConfigurationReference = 6A2A9E9706AE26B0C5928AF8 /* Pods-YMFoundationExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREFIX_HEADER = "YMFoundationExampleTests/YMFoundationExampleTests-Prefix.pch";
 				INFOPLIST_FILE = YMFoundationExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationExampleTests;
@@ -530,6 +531,7 @@
 			baseConfigurationReference = B178F68A1C20B818DBA79027 /* Pods-YMFoundationExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREFIX_HEADER = "YMFoundationExampleTests/YMFoundationExampleTests-Prefix.pch";
 				INFOPLIST_FILE = YMFoundationExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationExampleTests;

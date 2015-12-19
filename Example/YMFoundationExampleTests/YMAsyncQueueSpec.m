@@ -6,8 +6,6 @@
 //  Copyright © 2015年 YANKE Guo. All rights reserved.
 //
 
-#import "YMFoundationTestsHelper.h"
-
 SpecBegin(YMAsyncQueue)
 
 it(@"should work", ^{
