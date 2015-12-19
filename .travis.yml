@@ -1,0 +1,7 @@
+language: objective-c
+before_install: cd Example
+cache: cocoapods
+osx_image: xcode7.2
+xcode_workspace: YMFoundationExample.xcworkspace
+xcode_scheme: YMFoundationExample
+script: xctool -workspace YMFoundationExample.xcworkspace -scheme YMFoundationExample -sdk iphonesimulator test
