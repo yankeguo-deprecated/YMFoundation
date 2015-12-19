@@ -66,6 +66,11 @@
     key = [key stringByReplacingOccurrencesOfString:@"[]" withString:@""];
     key = key ?: @"";
 
+    value = [value CMDQueryStringSerialization_stringByRemovingEscapes];
+    value = value ?: @"";
+    block(key, value);
+
+    /**
     NSArray *values = [value componentsSeparatedByString:@","];
     for (__strong NSString *value in values) {
       value = [value CMDQueryStringSerialization_stringByRemovingEscapes];
@@ -73,6 +78,7 @@
 
       block(key, value);
     }
+    **/
   }
 }
 
