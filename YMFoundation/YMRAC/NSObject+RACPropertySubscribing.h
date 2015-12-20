@@ -46,14 +46,16 @@
 /// Returns a signal which sends the current value of the key path on
 /// subscription, then sends the new value every time it changes, and sends
 /// completed if self or observer is deallocated.
-#define RACObserve(TARGET, KEYPATH) \
+#define RACObserveWithObserver(TARGET, KEYPATH, OBSERVER) \
 	({ \
 		_Pragma("clang diagnostic push") \
 		_Pragma("clang diagnostic ignored \"-Wreceiver-is-weak\"") \
 		__weak id target_ = (TARGET); \
-		[target_ rac_valuesForKeyPath:@keypath(TARGET, KEYPATH) observer:self]; \
+		[target_ rac_valuesForKeyPath:@keypath(TARGET, KEYPATH) observer:OBSERVER]; \
 		_Pragma("clang diagnostic pop") \
 	})
+
+#define RACObserve(TARGET, KEYPATH) RACObserveWithObserver(TARGET, KEYPATH, self)
 
 @class RACDisposable;
 @class RACSignal;
