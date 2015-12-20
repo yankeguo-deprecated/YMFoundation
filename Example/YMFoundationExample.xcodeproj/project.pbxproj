@@ -14,6 +14,7 @@
 		692EA83F1BF8FF9E002AB696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692EA83D1BF8FF9E002AB696 /* Main.storyboard */; };
 		692EA8411BF8FF9E002AB696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692EA8401BF8FF9E002AB696 /* Assets.xcassets */; };
 		692EA8441BF8FF9E002AB696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692EA8421BF8FF9E002AB696 /* LaunchScreen.storyboard */; };
+		69708B891C271266003D3C13 /* YMUtilsRobustEqualsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 69708B881C271266003D3C13 /* YMUtilsRobustEqualsSpec.m */; };
 		6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */; };
 		6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */; };
 		6976648F1BF91F44000F3210 /* YMAsyncThresholderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976648E1BF91F44000F3210 /* YMAsyncThresholderSpec.m */; };
@@ -51,6 +52,7 @@
 		692EA8451BF8FF9E002AB696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6966C2B41BF9144D003B59A1 /* YMFoundationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMFoundationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6966C2B81BF9144D003B59A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69708B881C271266003D3C13 /* YMUtilsRobustEqualsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMUtilsRobustEqualsSpec.m; sourceTree = "<group>"; };
 		697664891BF91507000F3210 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncQueueSpec.m; sourceTree = "<group>"; };
 		6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncCallbackStoreSpec.m; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				6966C2B81BF9144D003B59A1 /* Info.plist */,
 				6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */,
 				692DD4911C25410700235640 /* YMAsyncBlockUtilsSpec.m */,
+				69708B881C271266003D3C13 /* YMUtilsRobustEqualsSpec.m */,
 			);
 			path = YMFoundationExampleTests;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				69EEBFDA1BF93D890076AF14 /* YMJSONSpec.m in Sources */,
 				6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */,
 				6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */,
+				69708B891C271266003D3C13 /* YMUtilsRobustEqualsSpec.m in Sources */,
 				69EEBFDC1BF9431C0076AF14 /* YMRouterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +502,12 @@
 				GCC_PREFIX_HEADER = YMFoundationExample/PrefixHeader.pch;
 				INFOPLIST_FILE = YMFoundationExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"YMFoundation\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -511,6 +521,12 @@
 				GCC_PREFIX_HEADER = YMFoundationExample/PrefixHeader.pch;
 				INFOPLIST_FILE = YMFoundationExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"YMFoundation\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juxian.YMFoundationExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
