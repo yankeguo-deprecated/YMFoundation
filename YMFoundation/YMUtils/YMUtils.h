@@ -8,6 +8,7 @@
 #import <YMFoundation/YMUtilsSuppressMacros.h>
 #import <YMFoundation/YMUtilsRobustEquals.h>
 #import <YMFoundation/YMUtilsSystemInfo.h>
+#import <YMFoundation/YMMathUtils.h>
 
 #import <YMFoundation/ISO8601Serialization.h>
 #import <YMFoundation/NSDate+ISO8601.h>
