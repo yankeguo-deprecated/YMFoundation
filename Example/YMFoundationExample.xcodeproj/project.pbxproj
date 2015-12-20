@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692DD4921C25410700235640 /* YMAsyncBlockUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 692DD4911C25410700235640 /* YMAsyncBlockUtilsSpec.m */; };
 		692EA8361BF8FF9E002AB696 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA8351BF8FF9E002AB696 /* main.m */; };
 		692EA8391BF8FF9E002AB696 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA8381BF8FF9E002AB696 /* AppDelegate.m */; };
 		692EA83C1BF8FF9E002AB696 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692EA83B1BF8FF9E002AB696 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 		3796FF00253809AED10919EE /* libPods-YMFoundationExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F2253F50A0DAAF5DC516ED /* libPods-YMFoundationExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMFoundationExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692DD4901C253F4600235640 /* YMFoundationExampleTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMFoundationExampleTests-Prefix.pch"; sourceTree = "<group>"; };
+		692DD4911C25410700235640 /* YMAsyncBlockUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAsyncBlockUtilsSpec.m; sourceTree = "<group>"; };
 		692EA8311BF8FF9E002AB696 /* YMFoundationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMFoundationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692EA8351BF8FF9E002AB696 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		692EA8371BF8FF9E002AB696 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				6976648A1BF9160D000F3210 /* YMAsyncQueueSpec.m */,
 				6966C2B81BF9144D003B59A1 /* Info.plist */,
 				6976648C1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m */,
+				692DD4911C25410700235640 /* YMAsyncBlockUtilsSpec.m */,
 			);
 			path = YMFoundationExampleTests;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6976648F1BF91F44000F3210 /* YMAsyncThresholderSpec.m in Sources */,
+				692DD4921C25410700235640 /* YMAsyncBlockUtilsSpec.m in Sources */,
 				69EEBFDA1BF93D890076AF14 /* YMJSONSpec.m in Sources */,
 				6976648D1BF9175F000F3210 /* YMAsyncCallbackStoreSpec.m in Sources */,
 				6976648B1BF9160D000F3210 /* YMAsyncQueueSpec.m in Sources */,
