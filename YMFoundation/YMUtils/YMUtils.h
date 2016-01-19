@@ -23,6 +23,7 @@
 #import <YMFoundation/NSDictionary+YMFoundation.h>
 #import <YMFoundation/NSMutableDictionary+YMFoundation.h>
 #import <YMFoundation/NSUserDefaults+YMFoundation.h>
+#import <YMFoundation/NSIndexPath+YMFoundation.h>
 
 #import <YMFoundation/CGGeometry+YMFoundation.h>
 #import <YMFoundation/UIView+YMEasyFrame.h>
