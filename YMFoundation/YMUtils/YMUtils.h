@@ -25,3 +25,4 @@
 #import <YMFoundation/NSUserDefaults+YMFoundation.h>
 
 #import <YMFoundation/CGGeometry+YMFoundation.h>
+#import <YMFoundation/UIView+YMEasyFrame.h>
