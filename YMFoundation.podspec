@@ -110,7 +110,11 @@ Pod::Spec.new do |s|
     sp.requires_arc         = true
     sp.library              = "c++"
 
-    public_header_files     = [
+    sp.source_files         = [
+      'YMFoundation/YMRealm/**/*.{h,hpp,m,mm,cpp}'
+    ]
+
+    sp.public_header_files  = [
       'YMFoundation/YMRealm/YMRealm.h',
       'YMFoundation/YMRealm/RLMArray.h',
       'YMFoundation/YMRealm/RLMCollection.h',
@@ -135,8 +139,7 @@ Pod::Spec.new do |s|
       'YMFoundation/YMRealm/RLMObjectBase_Dynamic.h'
     ]
 
-                                # Realm.Private module
-    private_header_files    = [
+    sp.private_header_files = [
       'YMFoundation/YMRealm/*_Private.h',
       'YMFoundation/YMRealm/RLMAccessor.h',
       'YMFoundation/YMRealm/RLMListBase.h',
@@ -144,23 +147,15 @@ Pod::Spec.new do |s|
       'YMFoundation/YMRealm/RLMOptionalBase.h'
     ]
 
-    source_files            = [
-      'YMFoundation/YMRealm/**/*.{h,hpp,m,mm,cpp}'
-    ]
-
-    sp.compiler_flags       = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"0.98.2\"' -D__ASSERTMACROS__"
-
-    sp.header_mappings_dir  = 'YMFoundation/YMRealm'
-
-    sp.source_files         = source_files
-    sp.public_header_files  = public_header_files
-    sp.private_header_files = private_header_files
-
     sp.pod_target_xcconfig  = {
       'CLANG_CXX_LANGUAGE_STANDARD'     => 'compiler-default',
       'OTHER_CPLUSPLUSFLAGS'            => '-std=c++1y $(inherited)',
       'APPLICATION_EXTENSION_API_ONLY'  => 'YES'
     }
+
+    sp.compiler_flags       = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"0.98.2\"' -D__ASSERTMACROS__"
+
+    sp.header_mappings_dir  = 'YMFoundation/YMRealm'
 
     sp.vendored_library     = "YMFoundation/YMRealm/librealm.a"
 
