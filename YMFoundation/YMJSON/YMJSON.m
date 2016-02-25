@@ -10,7 +10,7 @@
 
 #import <objc/runtime.h>
 
-const void *JSONDescriptorKey = &JSONDescriptorKey;
+static const void *YMJSONDescriptorKey = &YMJSONDescriptorKey;
 
 @implementation YMJSON
 
@@ -25,12 +25,12 @@ const void *JSONDescriptorKey = &JSONDescriptorKey;
     //  由子类构造描述
     [self buildDescriptor:desc];
     //  保存描述
-    objc_setAssociatedObject(self, JSONDescriptorKey, desc, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, YMJSONDescriptorKey, desc, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   }
 }
 
 + (YMJSONDescriptor *)descriptor {
-  return objc_getAssociatedObject(self, JSONDescriptorKey);
+  return objc_getAssociatedObject(self, YMJSONDescriptorKey);
 }
 
 + (void)buildDescriptor:(YMJSONDescriptor *)descriptor { }
@@ -96,10 +96,11 @@ const void *JSONDescriptorKey = &JSONDescriptorKey;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
   NSDictionary* dictionary = [aDecoder decodeObjectForKey:@"dictionary"];
   if ([dictionary isKindOfClass:[NSDictionary class]]) {
-    return [[[self class] alloc] initWithDictionary:dictionary];
-  } else {
-    return nil;
+    id instance = [[[self class] alloc] initWithDictionary:dictionary];
+    if (instance != nil) { return instance; }
   }
+  // Fallback to initialize a new empty instance
+  return [[[self class] alloc] init];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
