@@ -15,7 +15,7 @@
 
 #define AbstractJSON YMDictionaryConvertible
 
-@interface YMJSON: NSObject<YMDictionaryConvertible, YMStringConvertible, NSCopying>
+@interface YMJSON: NSObject<YMDictionaryConvertible, YMStringConvertible, NSCopying, NSSecureCoding>
 
 /**
  *  构建一个 YMJSONDescriptor，默认实现为空，需要子类复写

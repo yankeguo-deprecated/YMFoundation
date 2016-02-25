@@ -81,8 +81,29 @@ const void *JSONDescriptorKey = &JSONDescriptorKey;
   return YES;
 }
 
+#pragma mark - NSCopy
+
 - (id)copyWithZone:(NSZone *)zone {
   return [[[self class] alloc] initWithDictionary:self.toDictionary];
+}
+
+#pragma mark - NSCoding
+
++ (BOOL)supportsSecureCoding {
+  return YES;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+  NSDictionary* dictionary = [aDecoder decodeObjectForKey:@"dictionary"];
+  if ([dictionary isKindOfClass:[NSDictionary class]]) {
+    return [[[self class] alloc] initWithDictionary:dictionary];
+  } else {
+    return nil;
+  }
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+  [aCoder encodeObject:[self toDictionary] forKey:@"dictionary"];
 }
 
 @end
