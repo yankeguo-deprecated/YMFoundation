@@ -18,7 +18,7 @@
 
 - (id __nonnull)initWithModelClass:(Class __nonnull)clazz isArray:(BOOL)isArray {
   if (self = [super init]) {
-    NSParameterAssert([clazz conformsToProtocol:@protocol(AbstractJSON)]);
+    NSParameterAssert([clazz conformsToProtocol:@protocol(YMDictionaryConvertible)]);
     _modelClass = clazz;
     _modelArray = isArray;
   }
@@ -34,7 +34,7 @@
     }
   } else {
     if ([response isKindOfClass:[NSDictionary class]]) {
-      return [(id<AbstractJSON>) [_modelClass alloc] initWithDictionary:response];
+      return [(id<YMDictionaryConvertible>) [_modelClass alloc] initWithDictionary:response];
     } else {
       return nil;
     }

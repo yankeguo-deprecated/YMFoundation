@@ -36,6 +36,13 @@ Pod::Spec.new do |s|
     end
   end
 
+  # Basic Modules
+
+  # YMDefines
+  s.subspec "YMDefines" do |sp|
+    sp.source_files = "YMFoundation/YMDefines/**/*.{h,m}"
+  end
+
   # YMLogger
   s.subspec "YMLogger" do |sp|
     sp.source_files = "YMFoundation/YMLogger/**/*.{h,m}"
@@ -83,6 +90,7 @@ Pod::Spec.new do |s|
   s.subspec "YMJSON" do |sp|
     sp.source_files = "YMFoundation/YMJSON/**/*.{h,m}"
 
+    sp.dependency     "YMFoundation/YMDefines"
     sp.dependency     "YMFoundation/YMLogger"
     sp.dependency     "YMFoundation/YMUtils"
   end
@@ -102,7 +110,7 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMLogger"
     sp.dependency     "YMFoundation/YMUtils"
     sp.dependency     "YMFoundation/YMError"
-    sp.dependency     "YMFoundation/YMJSON"
+    sp.dependency     "YMFoundation/YMDefines"
   end
 
   # YMRealm

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Caleb Davenport. All rights reserved.
 //
 
-#import "NSURL+CMDQueryStringSerialization.h"
-#import "CMDQueryStringSerialization.h"
+#import "NSURL+YMQueryStringSerialization.h"
+#import "YMQueryStringSerialization.h"
 
 @implementation NSURL (CMDQueryStringSerialization)
 

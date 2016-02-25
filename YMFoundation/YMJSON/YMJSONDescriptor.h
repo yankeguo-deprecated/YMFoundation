@@ -10,7 +10,7 @@
 
 #import "YMJSONMappingItem.h"
 
-@protocol AbstractJSON;
+@protocol YMDictionaryConvertible;
 
 @interface YMJSONDescriptor: NSObject
 

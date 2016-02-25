@@ -4,6 +4,7 @@
 //  Created by Yanke Guo on 15/11/16.
 //  Copyright © 2015年 YMXian. All rights reserved.
 //
+#import <YMFoundation/YMDefines.h>
 #import <YMFoundation/YMLogger.h>
 #import <YMFoundation/YMUtils.h>
 #import <YMFoundation/YMLoader.h>

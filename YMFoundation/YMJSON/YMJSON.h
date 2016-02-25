@@ -7,19 +7,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "YMDictionaryConvertible.h"
+#import "YMStringConvertible.h"
 #import "YMJSONDescriptor.h"
 #import "YMJSONMappingItem.h"
 #import "YMJSONTransformer.h"
 
-@protocol AbstractJSON<NSObject>
+#define AbstractJSON YMDictionaryConvertible
 
-- (id __nullable)initWithDictionary:(NSDictionary *__nonnull)dict;
-
-- (NSDictionary *__nonnull)toDictionaryWithKeys:(NSArray<NSString *> *__nullable)keys;
-
-@end
-
-@interface YMJSON: NSObject<AbstractJSON, NSCopying>
+@interface YMJSON: NSObject<YMDictionaryConvertible, YMStringConvertible, NSCopying>
 
 /**
  *  构建一个 YMJSONDescriptor，默认实现为空，需要子类复写

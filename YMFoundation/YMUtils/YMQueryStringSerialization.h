@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CMDQueryStringWritingOptions.h"
-#import "NSURL+CMDQueryStringSerialization.h"
+#import "YMQueryStringWritingOptions.h"
+#import "NSURL+YMQueryStringSerialization.h"
+
+#define YMQueryStringSerialization CMDQueryStringSerialization
 
 /**
  Easily convert between query strings and dictionaries.

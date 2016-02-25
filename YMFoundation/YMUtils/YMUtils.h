@@ -12,13 +12,10 @@
 
 #import <YMFoundation/ISO8601Serialization.h>
 #import <YMFoundation/NSDate+ISO8601.h>
-#import <YMFoundation/CMDQueryStringSerialization.h>
-#import <YMFoundation/NSString+CMDQueryStringSerialization.h>
-#import <YMFoundation/NSURL+CMDQueryStringSerialization.h>
-#import <YMFoundation/M13OrderedDictionary.h>
-
-#define YMOrderedDictionary M13OrderedDictionary
-#define YMMutableOrderedDictionary M13MutableOrderedDictionary
+#import <YMFoundation/YMQueryStringSerialization.h>
+#import <YMFoundation/NSString+YMQueryStringSerialization.h>
+#import <YMFoundation/NSURL+YMQueryStringSerialization.h>
+#import <YMFoundation/YMOrderedDictionary.h>
 
 #import <YMFoundation/NSDictionary+YMFoundation.h>
 #import <YMFoundation/NSMutableDictionary+YMFoundation.h>

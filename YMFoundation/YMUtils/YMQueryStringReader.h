@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define YMQueryStringReader CMDQueryStringReader
+
 @interface CMDQueryStringReader: NSObject
 
 - (instancetype)initWithString:(NSString *)string;

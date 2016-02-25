@@ -9,7 +9,7 @@
 #import "YMRouter.h"
 
 #import "YMLogger.h"
-#import "CMDQueryStringSerialization.h"
+#import "YMQueryStringSerialization.h"
 
 /**
  *  RouteEntryComponent
@@ -195,7 +195,7 @@ static NSCharacterSet *YMRouteEntryComponentWildcardMarkSet = nil;
 
 - (BOOL)routePath:(NSString *)path params:(NSDictionary *)params {
   NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:path];
-  urlComponents.query = [CMDQueryStringSerialization queryStringWithDictionary:params];
+  urlComponents.query = [YMQueryStringSerialization queryStringWithDictionary:params];
   return [self routePath:urlComponents.URL.absoluteString];
 }
 
@@ -222,7 +222,7 @@ static NSCharacterSet *YMRouteEntryComponentWildcardMarkSet = nil;
   for (YMRouteEntry *entry in _routes) {
     NSDictionary *matchParams = [entry match:compos];
     if (matchParams) {
-      NSDictionary *queryParams = [CMDQueryStringSerialization dictionaryWithQueryString:url.query];
+      NSDictionary *queryParams = [YMQueryStringSerialization dictionaryWithQueryString:url.query];
       if (queryParams.count == 0) {
         entry.action(matchParams);
         return YES;

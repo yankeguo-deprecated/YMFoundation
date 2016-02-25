@@ -3,6 +3,7 @@ PODS:
   - Specta (1.0.5)
   - YMFoundation (0.1.0):
     - YMFoundation/YMAsync (= 0.1.0)
+    - YMFoundation/YMDefines (= 0.1.0)
     - YMFoundation/YMError (= 0.1.0)
     - YMFoundation/YMHTTP (= 0.1.0)
     - YMFoundation/YMJSON (= 0.1.0)
@@ -16,14 +17,16 @@ PODS:
   - YMFoundation/YMAsync (0.1.0):
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
+  - YMFoundation/YMDefines (0.1.0)
   - YMFoundation/YMError (0.1.0):
     - YMFoundation/YMLocale
   - YMFoundation/YMHTTP (0.1.0):
+    - YMFoundation/YMDefines
     - YMFoundation/YMError
-    - YMFoundation/YMJSON
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMJSON (0.1.0):
+    - YMFoundation/YMDefines
     - YMFoundation/YMLogger
     - YMFoundation/YMUtils
   - YMFoundation/YMLoader (0.1.0):
@@ -59,6 +62,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  YMFoundation: 47d121708dff1513d4fae552a9b763e245c3a022
+  YMFoundation: a542720d4282562b2c9b6cfad54cd49750521ef3
 
 COCOAPODS: 0.39.0

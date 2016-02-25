@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Caleb Davenport. All rights reserved.
 //
 
-#import "CMDQueryStringValueTransformer.h"
-#import "NSString+CMDQueryStringSerialization.h"
+#import "YMQueryStringValueTransformer.h"
+#import "NSString+YMQueryStringSerialization.h"
 
 #import "NSDate+ISO8601.h"
 

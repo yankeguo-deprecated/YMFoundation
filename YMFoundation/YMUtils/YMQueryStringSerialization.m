@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Caleb Davenport. All rights reserved.
 //
 
-#import "CMDQueryStringSerialization.h"
-#import "CMDQueryStringReader.h"
-#import "CMDQueryStringValueTransformer.h"
+#import "YMQueryStringSerialization.h"
+#import "YMQueryStringReader.h"
+#import "YMQueryStringValueTransformer.h"
 
 @implementation CMDQueryStringSerialization
 

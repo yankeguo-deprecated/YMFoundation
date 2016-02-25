@@ -14,7 +14,7 @@
 #import "YMLogger.h"
 #import "NSError+YMHTTP.h"
 #import "YMUtilsSuppressMacros.h"
-#import "CMDQueryStringSerialization.h"
+#import "YMQueryStringSerialization.h"
 
 static YMHTTPRequest *YMHTTPRequestDefault = nil;
 
@@ -313,9 +313,9 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
     if (_params.count) {
       if (components.query.length) {
         components.query =
-            [components.query stringByAppendingFormat:@"&%@", [CMDQueryStringSerialization queryStringWithDictionary:_params]];
+            [components.query stringByAppendingFormat:@"&%@", [YMQueryStringSerialization queryStringWithDictionary:_params]];
       } else {
-        components.query = [CMDQueryStringSerialization queryStringWithDictionary:_params];
+        components.query = [YMQueryStringSerialization queryStringWithDictionary:_params];
       }
     }
     url = components.URL;
@@ -372,7 +372,7 @@ static YMHTTPRequest *YMHTTPRequestDefault = nil;
     [_URLRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     //  Set Body
     _URLRequest.HTTPBody =
-        [[CMDQueryStringSerialization queryStringWithDictionary:_params] dataUsingEncoding:NSUTF8StringEncoding];
+        [[YMQueryStringSerialization queryStringWithDictionary:_params] dataUsingEncoding:NSUTF8StringEncoding];
   }
 
   [self freeze];

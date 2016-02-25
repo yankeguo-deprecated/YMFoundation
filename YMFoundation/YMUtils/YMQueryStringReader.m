@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Caleb Davenport. All rights reserved.
 //
 
-#import "CMDQueryStringReader.h"
-#import "NSString+CMDQueryStringSerialization.h"
+#import "YMQueryStringReader.h"
+#import "NSString+YMQueryStringSerialization.h"
 
 @implementation CMDQueryStringReader {
   NSDictionary *_dictionary;

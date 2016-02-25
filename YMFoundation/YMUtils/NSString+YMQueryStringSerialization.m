@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Caleb Davenport. All rights reserved.
 //
 
-#import "NSString+CMDQueryStringSerialization.h"
+#import "NSString+YMQueryStringSerialization.h"
 
 @implementation NSString (CMDQueryStringSerialization)
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CMDQueryStringWritingOptions.h"
+#import "YMQueryStringWritingOptions.h"
 
 @interface NSObject (CMDQueryStringValueTransformer)
 

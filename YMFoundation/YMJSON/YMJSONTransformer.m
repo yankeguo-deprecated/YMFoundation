@@ -36,7 +36,7 @@
   if ([self instancesRespondToSelector:[self selectorForDirectClassTransform:cls]]) {
     return true;
   }
-  return [cls conformsToProtocol:@protocol(AbstractJSON)];
+  return [cls conformsToProtocol:@protocol(YMDictionaryConvertible)];
 }
 
 + (BOOL)canTransformJSONObjectToClass:(Class __nonnull)cls withGeneric:(Class __nonnull)genericCls {
@@ -270,7 +270,7 @@
   if ([self canDirectTransformClassToJSONObject:cls]) {
     return true;
   }
-  return [cls conformsToProtocol:@protocol(AbstractJSON)];
+  return [cls conformsToProtocol:@protocol(YMDictionaryConvertible)];
 }
 
 - (id __nonnull)transformToJSONObject:(id)object {

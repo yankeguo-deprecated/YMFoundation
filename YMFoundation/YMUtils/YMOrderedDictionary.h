@@ -66,6 +66,12 @@
 #endif
 #endif
 
+#pragma mark - Name Alias
+
+#define YMOrderedDictionary         M13OrderedDictionary
+
+#define YMMutableOrderedDictionary  M13MutableOrderedDictionary
+
 #pragma mark - Main interface
 
 NS_ASSUME_NONNULL_BEGIN

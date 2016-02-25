@@ -73,6 +73,10 @@ const void *JSONDescriptorKey = &JSONDescriptorKey;
   return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
+- (NSString *)toString {
+  return [self toJSONString];
+}
+
 - (BOOL)validate {
   return YES;
 }
