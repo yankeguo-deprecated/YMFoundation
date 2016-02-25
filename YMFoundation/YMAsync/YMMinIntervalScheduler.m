@@ -37,7 +37,12 @@
   _lastScheduled = YMGetDeviceUptimeInMilliseconds();
 }
 
+- (void)clearLastScheduled {
+  _lastScheduled = 0;
+}
+
 - (BOOL)schedule:(void (^ __nonnull)())block {
+  // Be warned, _lastScheduled == 0 means never scheduled, should be treated separately in case of app launching shortly after device turned on.
   if (_lastScheduled == 0) {
     block_safe_invoke(block);
     return YES;

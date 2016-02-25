@@ -27,6 +27,11 @@
 - (void)updateLastScheduled;
 
 /**
+ *  清除上次调用时间,下次调用的时候会自动计算
+ */
+- (void)clearLastScheduled;
+
+/**
  *  尝试执行代码,并不会更新内置计时
  */
 - (BOOL)schedule:(void (^ __nonnull)())block;
