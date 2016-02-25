@@ -104,4 +104,66 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMError"
     sp.dependency     "YMFoundation/YMJSON"
   end
+
+  # YMRealm
+  s.subspec "YMRealm" do |sp|
+    sp.requires_arc         = true
+    sp.library              = "c++"
+
+    public_header_files     = [
+      'YMFoundation/YMRealm/YMRealm.h',
+      'YMFoundation/YMRealm/RLMArray.h',
+      'YMFoundation/YMRealm/RLMCollection.h',
+      'YMFoundation/YMRealm/RLMConstants.h',
+      'YMFoundation/YMRealm/RLMDefines.h',
+      'YMFoundation/YMRealm/RLMListBase.h',
+      'YMFoundation/YMRealm/RLMMigration.h',
+      'YMFoundation/YMRealm/RLMObject.h',
+      'YMFoundation/YMRealm/RLMObjectBase.h',
+      'YMFoundation/YMRealm/RLMObjectSchema.h',
+      'YMFoundation/YMRealm/RLMOptionalBase.h',
+      'YMFoundation/YMRealm/RLMPlatform.h',
+      'YMFoundation/YMRealm/RLMProperty.h',
+      'YMFoundation/YMRealm/RLMRealm.h',
+      'YMFoundation/YMRealm/RLMRealmConfiguration.h',
+      'YMFoundation/YMRealm/RLMResults.h',
+      'YMFoundation/YMRealm/RLMSchema.h',
+      'YMFoundation/YMRealm/Realm.h',
+
+      # Realm.Dynamic module
+      'YMFoundation/YMRealm/RLMRealm_Dynamic.h',
+      'YMFoundation/YMRealm/RLMObjectBase_Dynamic.h'
+    ]
+
+                                # Realm.Private module
+    private_header_files    = [
+      'YMFoundation/YMRealm/*_Private.h',
+      'YMFoundation/YMRealm/RLMAccessor.h',
+      'YMFoundation/YMRealm/RLMListBase.h',
+      'YMFoundation/YMRealm/RLMObjectStore.h',
+      'YMFoundation/YMRealm/RLMOptionalBase.h'
+    ]
+
+    source_files            = [
+      'YMFoundation/YMRealm/**/*.{h,hpp,m,mm,cpp}'
+    ]
+
+    sp.compiler_flags       = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"0.98.2\"' -D__ASSERTMACROS__"
+
+    sp.header_mappings_dir  = 'YMFoundation/YMRealm'
+
+    sp.source_files         = source_files
+    sp.public_header_files  = public_header_files
+    sp.private_header_files = private_header_files
+
+    sp.pod_target_xcconfig  = {
+      'CLANG_CXX_LANGUAGE_STANDARD'     => 'compiler-default',
+      'OTHER_CPLUSPLUSFLAGS'            => '-std=c++1y $(inherited)',
+      'APPLICATION_EXTENSION_API_ONLY'  => 'YES'
+    }
+
+    sp.vendored_library     = "YMFoundation/YMRealm/librealm.a"
+
+    sp.dependency     "YMFoundation/YMJSON"
+  end
 end

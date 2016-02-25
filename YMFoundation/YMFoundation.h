@@ -16,3 +16,5 @@
 #import <YMFoundation/YMLocale.h>
 #import <YMFoundation/YMHTTP.h>
 #import <YMFoundation/YMRouter.h>
+
+#import <YMFoundation/YMRealm.h>
