@@ -472,9 +472,20 @@ static IMP RLMAccessorGetter(RLMProperty *prop, RLMAccessorCode accessorCode) {
                 return RLMGetDate(obj, colIndex);
             });
         case RLMAccessorCodeData:
-            return imp_implementationWithBlock(^(__unsafe_unretained RLMObjectBase *const obj) {
-                return RLMGetData(obj, colIndex);
-            });
+            if (prop.codingClassName == nil) {
+                return imp_implementationWithBlock(^(__unsafe_unretained RLMObjectBase *const obj) {
+                  return RLMGetData(obj, colIndex);
+                });
+            } else {
+                return imp_implementationWithBlock(^(__unsafe_unretained RLMObjectBase *const obj) {
+                    NSData* data = RLMGetData(obj, colIndex);
+                    if (data != nil) {
+                        return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+                    } else {
+                        return (id)data;
+                    }
+                });
+            }
         case RLMAccessorCodeLink:
             return imp_implementationWithBlock(^id(__unsafe_unretained RLMObjectBase *const obj) {
                 return RLMGetLink(obj, colIndex, objectClassName);
@@ -527,6 +538,19 @@ static IMP RLMMakeSetter(RLMProperty *prop) {
             @throw RLMException(@"Primary key can't be changed after an object is inserted.");
         });
     }
+
+    if (prop.type == RLMPropertyTypeData && prop.codingClassName != nil) {
+        return imp_implementationWithBlock(^(__unsafe_unretained RLMObjectBase *const obj, id val) {
+            RLMWrapSetter(obj, name, [&] {
+                NSData *data = nil;
+                if (val != nil) {
+                    data = [NSKeyedArchiver archivedDataWithRootObject:val];
+                }
+                RLMSetValue(obj, colIndex, data);
+            });
+        });
+    }
+
     return imp_implementationWithBlock(^(__unsafe_unretained RLMObjectBase *const obj, ArgType val) {
         RLMWrapSetter(obj, name, [&] {
             RLMSetValue(obj, colIndex, static_cast<StorageType>(val));
@@ -855,7 +879,12 @@ void RLMDynamicSet(__unsafe_unretained RLMObjectBase *const obj, __unsafe_unreta
             RLMSetValue(obj, col, (NSDate *)val);
             break;
         case RLMAccessorCodeData:
-            RLMSetValue(obj, col, (NSData *)val);
+            if (prop.codingClassName != nil && val != nil) {
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:val];
+                RLMSetValue(obj, col, data);
+            } else {
+                RLMSetValue(obj, col, (NSData *)val);
+            }
             break;
         case RLMAccessorCodeLink: {
             if (!val || val == NSNull.null) {
@@ -906,7 +935,14 @@ id RLMDynamicGet(__unsafe_unretained RLMObjectBase *obj, __unsafe_unretained RLM
         case RLMAccessorCodeBool:         return @(RLMGetBool(obj, col));
         case RLMAccessorCodeString:       return RLMGetString(obj, col);
         case RLMAccessorCodeDate:         return RLMGetDate(obj, col);
-        case RLMAccessorCodeData:         return RLMGetData(obj, col);
+        case RLMAccessorCodeData:         {
+            NSData* data = RLMGetData(obj, col);
+            if (prop.codingClassName != nil && data != nil) {
+                return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            } else {
+                return data;
+            }
+        }
         case RLMAccessorCodeLink:         return RLMGetLink(obj, col, prop.objectClassName);
         case RLMAccessorCodeArray:        return RLMGetArray(obj, col, prop.objectClassName, prop.name);
         case RLMAccessorCodeAny:          return RLMGetAnyProperty(obj, col);

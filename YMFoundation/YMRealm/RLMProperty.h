@@ -78,6 +78,8 @@ RLM_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly, copy, nullable) NSString *objectClassName;
 
+@property (nonatomic, readonly, copy, nullable) NSString *codingClassName;
+
 /**
  Whether this property is optional.
  */

@@ -139,7 +139,7 @@ BOOL RLMIsObjectValidForProperty(__unsafe_unretained id const obj,
             }
             return NO;
         case RLMPropertyTypeData:
-            return [obj isKindOfClass:[NSData class]];
+            return [obj isKindOfClass:[NSData class]] || ([[obj class] conformsToProtocol:@protocol(NSCoding)] && property.codingClassName != nil);
         case RLMPropertyTypeAny:
             return object_has_valid_type(obj);
         case RLMPropertyTypeObject: {

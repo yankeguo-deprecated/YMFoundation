@@ -203,6 +203,17 @@ BOOL RLMPropertyTypeIsNumeric(RLMPropertyType propertyType) {
                 // verify type
                 Class cls = [RLMSchema classForString:className];
                 if (!cls) {
+
+                    // try NSCoding
+                    Class aClass = NSClassFromString(className);
+
+                    if (aClass && [[aClass class] conformsToProtocol:@protocol(NSCoding)]) {
+                        _type = RLMPropertyTypeData;
+                        _optional = true;
+                        _codingClassName = className;
+                        return YES;
+                    }
+
                     @throw RLMException(@"'%@' is not supported as an RLMObject property. All properties must be primitives, NSString, NSDate, NSData, RLMArray, or subclasses of RLMObject. See https://realm.io/docs/objc/latest/api/Classes/RLMObject.html for more information.", className);
                 }
 
@@ -401,6 +412,7 @@ BOOL RLMPropertyTypeIsNumeric(RLMPropertyType propertyType) {
     prop->_type = _type;
     prop->_objcType = _objcType;
     prop->_objectClassName = _objectClassName;
+    prop->_codingClassName = _codingClassName;
     prop->_indexed = _indexed;
     prop->_getterName = _getterName;
     prop->_setterName = _setterName;
