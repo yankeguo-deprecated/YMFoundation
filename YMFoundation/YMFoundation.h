@@ -19,3 +19,4 @@
 #import <YMFoundation/YMRouter.h>
 
 #import <YMFoundation/YMRealm.h>
+#import <YMFoundation/YMWebImage.h>

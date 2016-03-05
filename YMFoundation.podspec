@@ -169,4 +169,10 @@ Pod::Spec.new do |s|
 
     sp.dependency     "YMFoundation/YMJSON"
   end
+
+  # YMWebImage(SDWebImage)
+  s.subspec "YMWebImage" do |sp|
+    sp.framework = 'ImageIO'
+    sp.source_files = "YMFoundation/YMWebImage/**/*.{h,m}"
+  end
 end
