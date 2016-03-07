@@ -86,6 +86,19 @@ RLM_ASSUME_NONNULL_BEGIN
 
 @interface RLMObject : RLMObjectBase
 
+#pragma mark - Scoped Default Realm
+
+/**
+ Default RLMRealm for current RLMObject class
+
+ This will infect all methods without RLMRealm parameter passed in, such as `createInDefaultRealmWithValue`, `objectsWithPredicate`
+
+ Override this method in subclass.
+
+ default implementation returns [RLMRealm defaultRealm]
+ */
++ (RLMRealm *)defaultRealm;
+
 #pragma mark - Creating & Initializing Objects
 
 /**

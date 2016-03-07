@@ -35,6 +35,10 @@
 // synthesized in RLMObjectBase
 @dynamic invalidated, realm, objectSchema;
 
++ (RLMRealm *)defaultRealm {
+    return [RLMRealm defaultRealm];
+}
+
 - (instancetype)init {
     return [super init];
 }
@@ -50,7 +54,7 @@
 }
 
 + (instancetype)createInDefaultRealmWithValue:(id)value {
-    return (RLMObject *)RLMCreateObjectInRealmWithValue([RLMRealm defaultRealm], [self className], value, false);
+    return (RLMObject *)RLMCreateObjectInRealmWithValue([self.class defaultRealm], [self className], value, false);
 }
 
 + (instancetype)createInDefaultRealmWithObject:(id)object {
@@ -66,7 +70,7 @@
 }
 
 + (instancetype)createOrUpdateInDefaultRealmWithValue:(id)value {
-    return [self createOrUpdateInRealm:[RLMRealm defaultRealm] withValue:value];
+    return [self createOrUpdateInRealm:[self.class defaultRealm] withValue:value];
 }
 
 + (instancetype)createOrUpdateInDefaultRealmWithObject:(id)object {
@@ -78,7 +82,7 @@
     RLMObjectSchema *schema = [self sharedSchema];
     if (!schema.primaryKeyProperty) {
         NSString *reason = [NSString stringWithFormat:@"'%@' does not have a primary key and can not be updated", schema.className];
-        @throw [NSException exceptionWithName:@"RLMExecption" reason:reason userInfo:nil];
+        @throw [NSException exceptionWithName:@"RLMException" reason:reason userInfo:nil];
     }
     return (RLMObject *)RLMCreateObjectInRealmWithValue(realm, [self className], value, true);
 }
@@ -96,7 +100,7 @@
 }
 
 + (RLMResults *)allObjects {
-    return RLMGetObjects(RLMRealm.defaultRealm, self.className, nil);
+    return RLMGetObjects([self.class defaultRealm], self.className, nil);
 }
 
 + (RLMResults *)allObjectsInRealm:(RLMRealm *)realm {
@@ -128,7 +132,7 @@
 }
 
 + (RLMResults *)objectsWithPredicate:(NSPredicate *)predicate {
-    return RLMGetObjects(RLMRealm.defaultRealm, self.className, predicate);
+    return RLMGetObjects([self.class defaultRealm], self.className, predicate);
 }
 
 + (RLMResults *)objectsInRealm:(RLMRealm *)realm withPredicate:(NSPredicate *)predicate {
@@ -136,7 +140,7 @@
 }
 
 + (instancetype)objectForPrimaryKey:(id)primaryKey {
-    return RLMGetObject(RLMRealm.defaultRealm, self.className, primaryKey);
+    return RLMGetObject([self.class defaultRealm], self.className, primaryKey);
 }
 
 + (instancetype)objectInRealm:(RLMRealm *)realm forPrimaryKey:(id)primaryKey {
