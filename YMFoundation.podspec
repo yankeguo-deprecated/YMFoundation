@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
   # YMLogger
   s.subspec "YMLogger" do |sp|
     sp.source_files = "YMFoundation/YMLogger/**/*.{h,m}"
+    sp.dependency     "YMFoundation/YMUtils"
   end
 
   # YMUtils

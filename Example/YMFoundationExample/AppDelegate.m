@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  DLog(@"What The Fuck %@", @"AA");
+  DLog(@"What The Fuck %@", @"AA");
   return YES;
 }
 
