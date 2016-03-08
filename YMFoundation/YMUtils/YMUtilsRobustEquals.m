@@ -28,3 +28,25 @@ BOOL NSNumberEquals(NSNumber *number1, NSNumber *number2) {
 BOOL NSNumberNotEquals(NSNumber *number1, NSNumber *number2) {
   return !NSNumberEquals(number1, number2);
 }
+
+BOOL NSDateEqualsToSecond(NSDate *date1, NSDate *date2) {
+  if (date1 == nil && date2 == nil) {
+    return YES;
+  }
+  return date1 != nil && date2 != nil && (((long) [date1 timeIntervalSinceReferenceDate]) == ((long) [date2 timeIntervalSinceReferenceDate]));
+}
+
+BOOL NSDateNotEqualsToSecond(NSDate *date1, NSDate *date2) {
+  return !NSDateEqualsToSecond(date1, date2);
+}
+
+BOOL NSDateEquals(NSDate *date1, NSDate *date2) {
+  if (date1 == nil && date2 == nil) {
+    return YES;
+  }
+  return date1 != nil && date2 != nil && [date1 isEqualToDate:date2];
+}
+
+BOOL NSDateNotEquals(NSDate *date1, NSDate *date2) {
+  return !NSDateEquals(date1, date2);
+}

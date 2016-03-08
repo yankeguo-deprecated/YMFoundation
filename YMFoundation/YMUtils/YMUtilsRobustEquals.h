@@ -18,3 +18,13 @@ extern BOOL NSStringNotEquals(NSString *__nullable string1, NSString *__nullable
 extern BOOL NSNumberEquals(NSNumber *__nullable number1, NSNumber *__nullable number2);
 
 extern BOOL NSNumberNotEquals(NSNumber *__nullable number1, NSNumber *__nullable number2);
+
+#pragma mark - NSDate
+
+extern BOOL NSDateEquals(NSDate *__nullable date1, NSDate *__nullable date2);
+
+extern BOOL NSDateEqualsToSecond(NSDate *__nullable date1, NSDate *__nullable date2);
+
+extern BOOL NSDateNotEquals(NSDate *__nullable date1, NSDate *__nullable date2);
+
+extern BOOL NSDateNotEqualsToSecond(NSDate *__nullable date1, NSDate *__nullable date2);
