@@ -4,6 +4,7 @@ target 'YMFoundationExample' do
   pod "YMFoundation", path: '../'
 end
 target 'YMFoundationExampleTests' do
+  pod "YMFoundation", path: '../'
   pod "Specta"
   pod "Expecta"
 end

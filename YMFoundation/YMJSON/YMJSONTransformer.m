@@ -9,7 +9,9 @@
 #import "YMJSON.h"
 
 #import "YMLogger.h"
+#import "YMUtils.h"
 #import "YMUtilsSuppressMacros.h"
+#import "NSDecimalNumber+YMFoundation.h"
 
 #import <objc/runtime.h>
 
@@ -100,10 +102,10 @@
 
 - (NSDecimalNumber *__nullable)NSDecimalNumberFromJSONObject:(id __nonnull)object {
   if ([object isKindOfClass:[NSString class]]) {
-    return [NSDecimalNumber decimalNumberWithString:object];
+    return [[NSDecimalNumber decimalNumberWithString:object] sanitize];
   }
   if ([object isKindOfClass:[NSNumber class]]) {
-    return [NSDecimalNumber decimalNumberWithString:[((NSNumber *) object) stringValue]];
+    return [[NSDecimalNumber decimalNumberWithString:[((NSNumber *) object) stringValue]] sanitize];
   }
   return nil;
 }
