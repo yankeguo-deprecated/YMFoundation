@@ -40,3 +40,5 @@
 #pragma mark - Functions
 
 uint64_t YMGetDeviceUptimeInMilliseconds();
+
+void     YMTimeProfile(NSString * __nonnull name, void(^block)());

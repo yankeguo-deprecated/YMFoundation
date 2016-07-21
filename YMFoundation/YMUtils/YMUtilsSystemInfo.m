@@ -8,6 +8,8 @@
 
 #import "YMUtilsSystemInfo.h"
 
+#import "YMLogger.h"
+
 #import <mach/mach_time.h>
 
 uint64_t YMGetDeviceUptimeInMilliseconds() {
@@ -21,4 +23,11 @@ uint64_t YMGetDeviceUptimeInMilliseconds() {
   // mach_absolute_time() returns billionth of seconds,
   // so divide by one million to get milliseconds
   return ((mach_absolute_time() * s_timebase_info.numer) / (kOneMillion * s_timebase_info.denom));
+}
+
+void     YMTimeProfile(NSString * __nonnull name, void(^block)()) {
+  uint64_t start = YMGetDeviceUptimeInMilliseconds();
+  if (block) block();
+  uint64_t diff  = YMGetDeviceUptimeInMilliseconds() - start;
+  DLog(@"[YMTimeProfile] %@: %ld", name, diff);
 }
