@@ -6,6 +6,7 @@
 //
 
 #import <YMFoundation/YMUtilsSuppressMacros.h>
+#import <YMFoundation/YMUtilsMiscMacros.h>
 #import <YMFoundation/YMUtilsRobustEquals.h>
 #import <YMFoundation/YMUtilsSystemInfo.h>
 #import <YMFoundation/YMMathUtils.h>
