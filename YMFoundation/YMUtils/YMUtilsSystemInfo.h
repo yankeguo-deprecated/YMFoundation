@@ -41,4 +41,4 @@
 
 uint64_t YMGetDeviceUptimeInMilliseconds();
 
-void     YMTimeProfile(NSString * __nonnull name, void(^block)());
+void     YMTimeProfile(NSString * __nonnull name, void(^ __nullable block)());

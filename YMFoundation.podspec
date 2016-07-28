@@ -114,6 +114,17 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMDefines"
   end
 
+  # YMModel
+  s.subspec "YMModel" do |sp|
+    sp.source_files = "YMFoundation/YMModel/**/*.{h,m}"
+
+    sp.dependency     "YMFoundation/YMLogger"
+    sp.dependency     "YMFoundation/YMUtils"
+    sp.dependency     "YMFoundation/YMError"
+    sp.dependency     "YMFoundation/YMDefines"
+    sp.dependency     "YMFoundation/YMJSON"
+  end
+
   # YMRealm
   s.subspec "YMRealm" do |sp|
     sp.requires_arc         = true

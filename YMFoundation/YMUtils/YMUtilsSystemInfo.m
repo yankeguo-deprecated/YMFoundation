@@ -29,5 +29,5 @@ void     YMTimeProfile(NSString * __nonnull name, void(^block)()) {
   uint64_t start = YMGetDeviceUptimeInMilliseconds();
   if (block) block();
   uint64_t diff  = YMGetDeviceUptimeInMilliseconds() - start;
-  DLog(@"[YMTimeProfile] %@: %ld", name, diff);
+  DLog(@"[YMTimeProfile] %@: %lld", name, diff);
 }
