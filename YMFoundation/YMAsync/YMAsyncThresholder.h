@@ -29,6 +29,6 @@
  *
  *  @param block block
  */
-- (void)queueBlock:(YMAsyncVoidBlock __nonnull)block;
+- (void)queueBlock:(YMVoidBlock __nonnull)block;
 
 @end

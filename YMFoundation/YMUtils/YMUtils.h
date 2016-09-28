@@ -19,6 +19,7 @@
 #import <YMFoundation/YMOrderedDictionary.h>
 
 #import <YMFoundation/NSArray+YMFoundation.h>
+#import <YMFoundation/NSString+YMUtils.h>
 #import <YMFoundation/NSDictionary+YMFoundation.h>
 #import <YMFoundation/NSMutableDictionary+YMFoundation.h>
 #import <YMFoundation/NSUserDefaults+YMFoundation.h>

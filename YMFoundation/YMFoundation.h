@@ -20,3 +20,5 @@
 
 #import <YMFoundation/YMRealm.h>
 #import <YMFoundation/YMWebImage.h>
+
+#import <YMFoundation/YMResource.h>

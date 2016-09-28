@@ -162,7 +162,6 @@ static NSCharacterSet *YMRouteEntryComponentWildcardMarkSet = nil;
 
 - (BOOL)routeUrl:(NSURL *)url {
   if (url.scheme == nil) {
-    ELog(@"URL Scheme is nil");
     return NO;
   }
   if ([url.scheme isEqualToString:_scheme]) {

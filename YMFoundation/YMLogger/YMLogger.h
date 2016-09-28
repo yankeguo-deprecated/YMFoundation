@@ -7,6 +7,8 @@
 
 #import "YMLoggerOutput.h"
 #import "YMLoggerConsoleOutput.h"
+#import "YMLoggerMemoryOutput.h"
+#import "YMLogItem.h"
 
 #pragma mark - Useful Macros
 
@@ -22,16 +24,6 @@
 #define FLog(format, ...) YMSLog(YMLoggerSeverityFatal, format, ##__VA_ARGS__)
 
 #pragma mark - YMLogger
-
-typedef NS_ENUM(NSInteger, YMLoggerSeverity) {
-  YMLoggerSeverityDebug,            // Lowest log level
-  YMLoggerSeverityInfo,
-  YMLoggerSeverityWarn,
-  YMLoggerSeverityError,
-  YMLoggerSeverityFatal             // Highest log level
-};
-
-extern NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severity);
 
 @interface YMLogger: NSObject
 
@@ -54,11 +46,15 @@ extern NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severit
 /* Console Output, default added to self.outputs */
 @property(nonatomic, readonly) YMLoggerConsoleOutput *__nonnull consoleOutput;
 
+@property(nonatomic, readonly) YMLoggerMemoryOutput *__nonnull memoryOutput;
+
 /* Shared instance */
 + (instancetype __nonnull)sharedInstance;
 
 /* Add a output */
 - (void)addOutput:(id<YMLoggerOutput> __nonnull)output;
+
+- (void)removeOutput:(id __nonnull)output;
 
 - (void)removeOutputAtIndex:(NSUInteger)index;
 

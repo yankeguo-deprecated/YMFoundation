@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 #import "YMLoaderProxy.h"
+#import "YMInjector.h"
 
 typedef id __nonnull (^YMLoaderObjectFactory)();
 

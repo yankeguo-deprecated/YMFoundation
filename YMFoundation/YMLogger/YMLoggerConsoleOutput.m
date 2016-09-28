@@ -4,16 +4,27 @@
 
 #import "YMLoggerConsoleOutput.h"
 #import "YMLogger.h"
+#import "YMUtilsMiscMacros.h"
 
 #import <asl.h>
 
 @interface YMLoggerConsoleOutput ()
 
 @property(nonatomic, weak) YMLogger *__nullable logger;
+@property(nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
 @implementation YMLoggerConsoleOutput
+
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateFormat:@"MM-dd HH:mm:ss"];
+  }
+  return self;
+}
 
 - (void)didAddToLogger:(YMLogger *__nonnull)logger {
   self.logger = logger;
@@ -22,7 +33,14 @@
 - (void)didRemoveFromLogger:(YMLogger *__nonnull)logger {
 }
 
-- (void)logger:(YMLogger *__nonnull)logger didOutputLine:(NSString *__nonnull)line {
+- (void)logger:(YMLogger *__nonnull)logger didOutputItem:(YMLogItem *__nonnull)item {
+  NSString *line = S(@"%@, %@/%@, %@, %@: %@",
+                     NSStringFromYMLoggerSeverity(item.serverity),
+                     item.bundleName,
+                     item.bundleVersion,
+                     [self.dateFormatter stringFromDate:item.time],
+                     item.lineInfo,
+                     item.content);
   fprintf(stderr, "%s\n", [line UTF8String]);
 }
 

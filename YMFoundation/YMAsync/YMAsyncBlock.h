@@ -13,35 +13,35 @@
 /**
  *  Block accept void, returns void
  */
-typedef void (^YMAsyncVoidBlock)();
+typedef void (^YMVoidBlock)();
 
 /**
  *  Block accept void, returns BOOL
  *
  *  @return BOOL
  */
-typedef BOOL (^YMAsyncBOOLBlock)();
+typedef BOOL (^YMBOOLBlock)();
 
 /**
  *  Block accept void, returns NSComparisonResult
  *
  *  @return NSComparisonResult
  */
-typedef NSComparisonResult (^YMAsyncCompareBlock)();
+typedef NSComparisonResult (^YMCompareBlock)();
 
 /**
  *  General purposed callback block
  *
  *  @param error error object if any error occured
  */
-typedef void (^YMAsyncCallbackBlock)(NSError *__nullable error);
+typedef void (^YMErrorBlock)(NSError *__nullable error);
 
 /**
  *  General purposed operation block, accept a YMAsyncCallbackBlock as input
  *
  *  @param callback YMAsyncCallbackBlock, shall be invoked when operation finished
  */
-typedef void (^YMAsyncOperationBlock)(YMAsyncCallbackBlock __nonnull callback);
+typedef void (^YMAsyncOperationBlock)(YMErrorBlock __nonnull callback);
 
 #pragma mark - Basic block macros
 

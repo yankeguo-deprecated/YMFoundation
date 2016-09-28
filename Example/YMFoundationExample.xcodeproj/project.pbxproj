@@ -507,7 +507,6 @@
 			baseConfigurationReference = 35CAE02FF7DF7FA01427122A /* Pods-YMFoundationExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = YMFoundationExample/PrefixHeader.pch;
 				INFOPLIST_FILE = YMFoundationExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -527,7 +526,6 @@
 			baseConfigurationReference = B3402E96388D20CF138C8A8F /* Pods-YMFoundationExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = YMFoundationExample/PrefixHeader.pch;
 				INFOPLIST_FILE = YMFoundationExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

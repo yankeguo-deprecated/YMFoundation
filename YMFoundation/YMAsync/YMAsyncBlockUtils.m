@@ -9,7 +9,7 @@
 
 #pragma mark - Block manimulate
 
-YMAsyncBOOLBlock YMAsyncCreateOnceBlock(YMAsyncVoidBlock inputBlock) {
+YMBOOLBlock YMAsyncCreateOnceBlock(YMVoidBlock inputBlock) {
   //  Create a flag
   __block BOOL clean = YES;
 
@@ -26,7 +26,7 @@ YMAsyncBOOLBlock YMAsyncCreateOnceBlock(YMAsyncVoidBlock inputBlock) {
   };
 }
 
-YMAsyncCompareBlock YMAsyncCreateAllBlock(NSUInteger count, YMAsyncVoidBlock inputBlock) {
+YMCompareBlock YMAsyncCreateAllBlock(NSUInteger count, YMVoidBlock inputBlock) {
   //  Create a counter
   __block NSUInteger n = 0;
 

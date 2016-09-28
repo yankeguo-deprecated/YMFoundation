@@ -13,7 +13,7 @@
 @interface YMAsyncThresholder ()
 
 @property(atomic, getter=isBlocking) BOOL blocking;
-@property(nonatomic, strong) NSMutableArray<YMAsyncVoidBlock> *blocks;
+@property(nonatomic, strong) NSMutableArray<YMVoidBlock> *blocks;
 
 @end
 
@@ -27,7 +27,7 @@
   return self;
 }
 
-- (void)queueBlock:(YMAsyncVoidBlock)block {
+- (void)queueBlock:(YMVoidBlock)block {
   if (self.isBlocking) {
     [self.blocks addObject:block];
   } else {
@@ -40,7 +40,7 @@
     return;
   }
   self.blocking = NO;
-  [self.blocks enumerateObjectsUsingBlock:^(YMAsyncVoidBlock _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+  [self.blocks enumerateObjectsUsingBlock:^(YMVoidBlock _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
     obj();
   }];
   [self.blocks removeAllObjects];

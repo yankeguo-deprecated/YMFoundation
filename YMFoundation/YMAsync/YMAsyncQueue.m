@@ -125,7 +125,7 @@
   if (!YMAsyncQueueIsEpsilon(timeout)) {
 
     //  Create a once-block for releaseBlock
-    YMAsyncBOOLBlock block1 = YMAsyncCreateOnceBlock(releaseBlock);
+    YMBOOLBlock block1 = YMAsyncCreateOnceBlock(releaseBlock);
 
     //  invoke block1 for timeout
     dispatch_main_after(timeout, ^{

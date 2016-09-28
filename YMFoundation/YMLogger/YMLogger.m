@@ -7,23 +7,8 @@
 
 #import "YMLogger.h"
 #import "NSDate+ISO8601.h"
-
-NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severity) {
-  switch (severity) {
-    case YMLoggerSeverityDebug:
-      return @"D";
-    case YMLoggerSeverityInfo:
-      return @"I";
-    case YMLoggerSeverityWarn:
-      return @"W";
-    case YMLoggerSeverityError:
-      return @"E";
-    case YMLoggerSeverityFatal:
-      return @"F";
-    default:
-      return @"?";
-  }
-}
+#import "YMLoggerMemoryOutput.h"
+#import "YMUtils.h"
 
 @interface YMLogger () {
   NSMutableArray<id<YMLoggerOutput>> *__nonnull _outputs;
@@ -61,6 +46,13 @@ NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severity) {
   [_outputs addObject:output];
 }
 
+- (void)removeOutput:(id __nonnull)output {
+  if ([output respondsToSelector:@selector(didRemoveFromLogger:)]) {
+    [output didRemoveFromLogger:self];
+  }
+  [_outputs removeObject:output];
+}
+
 - (void)removeOutputAtIndex:(NSUInteger)index {
   id<YMLoggerOutput> output = self.outputs[index];
   [_outputs removeObjectAtIndex:index];
@@ -75,7 +67,9 @@ NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severity) {
     //  Create outputs
     _outputs = [[NSMutableArray alloc] init];
     _consoleOutput = [YMLoggerConsoleOutput new];
+    _memoryOutput = [YMLoggerMemoryOutput new];
     [self addOutput:self.consoleOutput];
+    [self addOutput:self.memoryOutput];
     _bundleName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
     _bundleVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
     //  Set default severity
@@ -102,9 +96,17 @@ NSString *__nonnull NSStringFromYMLoggerSeverity(YMLoggerSeverity severity) {
 
 - (void)logWithSeverity:(YMLoggerSeverity)severity lineInfo:(NSString *__nonnull)lineInfo content:(NSString *__nonnull)content {
   if (severity < self.minimumSeverity) { return; }
-  NSString *line = [NSString stringWithFormat:@"%@, %@/%@, %@, %@: %@", NSStringFromYMLoggerSeverity(severity), self.bundleName, self.bundleVersion, [[NSDate date] ISO8601String], lineInfo, content];
+
+  YMLogItem *item = [[YMLogItem alloc] init];
+  item.serverity = severity;
+  item.bundleName = self.bundleName;
+  item.bundleVersion = self.bundleVersion;
+  item.time = [NSDate date];
+  item.lineInfo = lineInfo;
+  item.content = content;
+
   [self.outputs enumerateObjectsUsingBlock:^(id<YMLoggerOutput> output, NSUInteger idx, BOOL *stop) {
-    [output logger:self didOutputLine:line];
+    [output logger:self didOutputItem:item];
   }];
 }
 

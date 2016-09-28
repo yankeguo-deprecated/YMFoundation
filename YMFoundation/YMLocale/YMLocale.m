@@ -78,15 +78,6 @@ NSString* T(NSString* __nonnull key) {
 
     DLog(@"%@ entries load from cache.", @(self.store.count));
   }
-
-  // Print all i18n
-  DLog(@"i18n file start ========");
-  [[[self.store allKeys] sortedArrayUsingSelector:@selector(compare:)] enumerateObjectsUsingBlock:^(NSString *_Nonnull obj,
-                                                                                                    NSUInteger idx,
-                                                                                                    BOOL *_Nonnull stop) {
-    DLog(@"%@ = %@", obj, [self localizedStringForKey:obj]);
-  }];
-  DLog(@"i18n file end ========");
 }
 
 - (id)init {

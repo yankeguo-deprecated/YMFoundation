@@ -3,6 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YMLogItem.h"
 
 @class YMLogger;
 
@@ -11,7 +12,7 @@
 /**
  * Output a line of log
  */
-- (void)logger:(YMLogger *__nonnull)logger didOutputLine:(NSString *__nonnull)line;
+- (void)logger:(YMLogger *__nonnull)logger didOutputItem:(YMLogItem *__nonnull)item;
 
  @optional
 - (void)didAddToLogger:(YMLogger *__nonnull)logger;

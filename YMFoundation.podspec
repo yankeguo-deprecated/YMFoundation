@@ -114,9 +114,9 @@ Pod::Spec.new do |s|
     sp.dependency     "YMFoundation/YMDefines"
   end
 
-  # YMModel
-  s.subspec "YMModel" do |sp|
-    sp.source_files = "YMFoundation/YMModel/**/*.{h,m}"
+  # YMResource
+  s.subspec "YMResource" do |sp|
+    sp.source_files = "YMFoundation/YMResource/**/*.{h,m}"
 
     sp.dependency     "YMFoundation/YMLogger"
     sp.dependency     "YMFoundation/YMUtils"

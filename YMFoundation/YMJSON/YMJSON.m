@@ -35,6 +35,13 @@ static const void *YMJSONDescriptorKey = &YMJSONDescriptorKey;
 
 + (void)buildDescriptor:(YMJSONDescriptor *)descriptor { }
 
+- (id)init {
+  if (self = [super init]) {
+    [self didInit];
+  }
+  return self;
+}
+
 - (id)initWithDictionary:(NSDictionary *)dict {
   if (self = [super init]) {
     if (![[[self class] descriptor] applyDictionary:dict toObject:self]) {
@@ -43,18 +50,20 @@ static const void *YMJSONDescriptorKey = &YMJSONDescriptorKey;
     if (![self validate]) {
       return nil;
     }
+    [self didInit];
   }
   return self;
 }
 
 - (id __nullable)initWithString:(NSString *__nonnull)string {
-  NSDictionary *dict =
-      [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+  NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
   if (![dict isKindOfClass:[NSDictionary class]]) {
     return nil;
   }
   return [self initWithDictionary:dict];
 }
+
+- (void)didInit {}
 
 + (NSArray *)arrayFromDictionaries:(NSArray<NSDictionary *> *)dictionaries {
   return [[YMJSONTransformer shared] transformJSONObjectFrom:dictionaries toClass:[NSArray class] genericClass:self.class];

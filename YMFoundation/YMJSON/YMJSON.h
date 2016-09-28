@@ -22,7 +22,7 @@
  *
  *  @param descriptor YMJSONDescriptor
  */
-+ (void)buildDescriptor:(YMJSONDescriptor *__nonnull)descriptor;
++ (void)buildDescriptor:(YMJSONDescriptor *__nonnull)descriptor NS_REQUIRES_SUPER;
 
 /**
  *  从一个 YMJSON 字典初始化子类
@@ -44,15 +44,22 @@
 - (NSString *__nonnull)toJSONString;
 
 /**
+ *  NSCopy
+ */
+- (id __nonnull)copyWithZone:(NSZone *__nullable)zone;
+
+#pragma mark - Subclass
+
+/**
+ *  Will called after -init and -initWithDictionary / -initWithString
+ */
+- (void)didInit;
+
+/**
  *  可供子类覆盖，做一些基础验证，和额外初始化
  *
  *  @return YES 如果验证成功
  */
 - (BOOL)validate;
-
-/**
- *  NSCopy
- */
-- (id __nonnull)copyWithZone:(NSZone *__nullable)zone;
 
 @end

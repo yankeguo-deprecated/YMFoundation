@@ -65,12 +65,4 @@ SpecBegin(YMMathUtils)
     });
   });
 
-  describe(@"NSDecimalNumber fix", ^{
-    it(@"should work with sanitize", ^{
-      XCTAssertEqualObjects([[[NSDecimalNumber one] sanitize] stringValue], @"1");
-      XCTAssertEqualObjects([[[NSDecimalNumber notANumber] sanitize] stringValue], @"0");
-      XCTAssertEqualObjects([[[NSDecimalNumber decimalNumberWithString:@""] sanitize] stringValue], @"0");
-    });
-  });
-
 SpecEnd

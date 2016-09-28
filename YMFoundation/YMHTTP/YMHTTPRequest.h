@@ -214,6 +214,20 @@ typedef void
 - (YMHTTPRequest *__nonnull)onComplete:(YMHTTPRequestCompleteCallback __nonnull)complete;
 
 /**
+ *  直接调用成功回调，可以用于测试目的
+ *
+ *  @param responseObject 结果
+ */
+- (void)invokeSuccessWithResponseObject:(id __nonnull)responseObject;
+
+/**
+ *  直接调用失败回调，可以用于测试目的
+ *
+ *  @param error 错误
+ */
+- (void)invokeFailureWithError:(NSError * __nonnull)error;
+
+/**
  *  构建 URLRequest
  */
 - (void)buildRequest;
